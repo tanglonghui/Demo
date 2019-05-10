@@ -7,11 +7,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.TextView;
 
 import com.example.administrator.demo.adapter.EasyAdapter;
 import com.example.administrator.demo.model.EasyModel;
+import com.example.administrator.demo.res.SelectorActivity;
 import com.example.administrator.demo.retrofit.RetrofitActivity;
+import com.example.administrator.demo.web.WebActivity;
 import com.example.librarytest.utils.T;
 
 import java.util.ArrayList;
@@ -57,6 +60,8 @@ public class MainActivity extends AppCompatActivity {
 
     void initMList() {
         mList.add(new EasyModel("RetrofitDemo", RetrofitActivity.class));
+        mList.add(new EasyModel("webDemo", WebActivity.class));
+        mList.add(new EasyModel("Selector", SelectorActivity.class));
     }
 
     @OnClick(R.id.tv_Test)
