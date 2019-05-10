@@ -13,6 +13,7 @@ import android.widget.TextView;
 import com.example.administrator.demo.adapter.EasyAdapter;
 import com.example.administrator.demo.model.EasyModel;
 import com.example.administrator.demo.res.SelectorActivity;
+import com.example.administrator.demo.res.ShapeActivity;
 import com.example.administrator.demo.retrofit.RetrofitActivity;
 import com.example.administrator.demo.web.WebActivity;
 import com.example.librarytest.utils.T;
@@ -62,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
         mList.add(new EasyModel("RetrofitDemo", RetrofitActivity.class));
         mList.add(new EasyModel("webDemo", WebActivity.class));
         mList.add(new EasyModel("Selector", SelectorActivity.class));
+        mList.add(new EasyModel("Shape", ShapeActivity.class));
     }
 
     @OnClick(R.id.tv_Test)

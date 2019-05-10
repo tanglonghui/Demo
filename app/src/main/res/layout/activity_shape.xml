@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="2dp"
+    tools:context="com.example.administrator.demo.res.ShapeActivity">
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_rectangle"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="矩形" />
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_line"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="线" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_oval"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="圆" />
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_ring"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="圆环" />
+</LinearLayout>
