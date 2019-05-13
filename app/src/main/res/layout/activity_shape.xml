@@ -12,6 +12,7 @@
         android:layout_height="50dp"
         android:layout_margin="10dp"
         android:background="@drawable/shape_rectangle"
+        android:padding="4dp"
         android:layout_gravity="center_horizontal"
         android:gravity="center"
         android:text="矩形" />
@@ -24,8 +25,8 @@
         android:gravity="center"
         android:text="线" />
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_margin="10dp"
         android:background="@drawable/shape_oval"
         android:layout_gravity="center_horizontal"
