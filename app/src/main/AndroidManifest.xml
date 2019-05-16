@@ -36,7 +36,8 @@
         <activity android:name=".retrofit.RetrofitActivity" />
         <activity android:name=".web.WebActivity" />
         <activity android:name=".res.SelectorActivity" />
-        <activity android:name=".res.ShapeActivity"></activity>
+        <activity android:name=".res.ShapeActivity" />
+        <activity android:name=".rxjava.RxJavaActivity"/>
     </application>
 
 </manifest>
