@@ -37,7 +37,8 @@
         <activity android:name=".web.WebActivity" />
         <activity android:name=".res.SelectorActivity" />
         <activity android:name=".res.ShapeActivity" />
-        <activity android:name=".rxjava.RxJavaActivity"/>
+        <activity android:name=".rxjava.RxJavaActivity" />
+        <activity android:name=".date.DateActivity"></activity>
     </application>
 
 </manifest>

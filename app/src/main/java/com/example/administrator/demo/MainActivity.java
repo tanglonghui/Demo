@@ -11,6 +11,7 @@ import android.webkit.WebView;
 import android.widget.TextView;
 
 import com.example.administrator.demo.adapter.EasyAdapter;
+import com.example.administrator.demo.date.DateActivity;
 import com.example.administrator.demo.model.EasyModel;
 import com.example.administrator.demo.res.SelectorActivity;
 import com.example.administrator.demo.res.ShapeActivity;
@@ -66,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
         mList.add(new EasyModel("Selector", SelectorActivity.class));
         mList.add(new EasyModel("Shape", ShapeActivity.class));
         mList.add(new EasyModel("RxJava2", RxJavaActivity.class));
+        mList.add(new EasyModel("Date", DateActivity.class));
     }
 
     @OnClick(R.id.tv_Test)
