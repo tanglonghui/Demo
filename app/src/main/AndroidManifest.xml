@@ -38,7 +38,8 @@
         <activity android:name=".res.SelectorActivity" />
         <activity android:name=".res.ShapeActivity" />
         <activity android:name=".rxjava.RxJavaActivity" />
-        <activity android:name=".date.DateActivity"></activity>
+        <activity android:name=".date.DateActivity" />
+        <activity android:name=".AndroidBug5497.AndroidBug5479Activity"></activity>
     </application>
 
 </manifest>

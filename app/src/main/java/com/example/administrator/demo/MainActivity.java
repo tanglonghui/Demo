@@ -10,6 +10,7 @@ import android.view.View;
 import android.webkit.WebView;
 import android.widget.TextView;
 
+import com.example.administrator.demo.AndroidBug5497.AndroidBug5479Activity;
 import com.example.administrator.demo.adapter.EasyAdapter;
 import com.example.administrator.demo.date.DateActivity;
 import com.example.administrator.demo.model.EasyModel;
@@ -68,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
         mList.add(new EasyModel("Shape", ShapeActivity.class));
         mList.add(new EasyModel("RxJava2", RxJavaActivity.class));
         mList.add(new EasyModel("Date", DateActivity.class));
+        mList.add(new EasyModel("AndroidBug5479及键盘顶飞问题", AndroidBug5479Activity.class));
     }
 
     @OnClick(R.id.tv_Test)
