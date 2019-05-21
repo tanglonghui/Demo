@@ -39,7 +39,9 @@
         <activity android:name=".res.ShapeActivity" />
         <activity android:name=".rxjava.RxJavaActivity" />
         <activity android:name=".date.DateActivity" />
-        <activity android:name=".AndroidBug5497.AndroidBug5479Activity"></activity>
+        <activity
+            android:name=".AndroidBug5497.AndroidBug5479Activity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
     </application>
 
 </manifest>
