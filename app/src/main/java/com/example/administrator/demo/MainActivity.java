@@ -14,6 +14,7 @@ import com.example.administrator.demo.AndroidBug5497.AndroidBug5479Activity;
 import com.example.administrator.demo.adapter.EasyAdapter;
 import com.example.administrator.demo.date.DateActivity;
 import com.example.administrator.demo.model.EasyModel;
+import com.example.administrator.demo.recycleview.OpenRecordActivity;
 import com.example.administrator.demo.res.SelectorActivity;
 import com.example.administrator.demo.res.ShapeActivity;
 import com.example.administrator.demo.retrofit.RetrofitActivity;
@@ -70,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
         mList.add(new EasyModel("RxJava2", RxJavaActivity.class));
         mList.add(new EasyModel("Date", DateActivity.class));
         mList.add(new EasyModel("AndroidBug5479及键盘顶飞问题", AndroidBug5479Activity.class));
+        mList.add(new EasyModel("单个list多中item view", OpenRecordActivity.class));
     }
 
     @OnClick(R.id.tv_Test)
