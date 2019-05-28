@@ -11,6 +11,7 @@ import android.webkit.WebView;
 import android.widget.TextView;
 
 import com.example.administrator.demo.AndroidBug5497.AndroidBug5479Activity;
+import com.example.administrator.demo.PopupWindow.popupwindowFromGitHup.activity.PopuWindowDemoActivity;
 import com.example.administrator.demo.adapter.EasyAdapter;
 import com.example.administrator.demo.date.DateActivity;
 import com.example.administrator.demo.dialog.DialogActivity;
@@ -74,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
         mList.add(new EasyModel("AndroidBug5479及键盘顶飞问题", AndroidBug5479Activity.class));
         mList.add(new EasyModel("单个list多中item view", OpenRecordActivity.class));
         mList.add(new EasyModel("dialog", DialogActivity.class));
+        mList.add(new EasyModel("PopuWindowDemoActivity", PopuWindowDemoActivity.class));
     }
 
     @OnClick(R.id.tv_Test)

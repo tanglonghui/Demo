@@ -5,4 +5,6 @@
     <color name="colorAccent">#FF4081</color>
 
     <color name="white">#FFFFFF</color>
+    <color name="colorPopupItemBg">#7FFFFF</color>
+    <color name="colorPopupLayoutBg">#007FFF</color>
 </resources>

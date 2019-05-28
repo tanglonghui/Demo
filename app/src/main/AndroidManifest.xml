@@ -43,7 +43,11 @@
             android:name=".AndroidBug5497.AndroidBug5479Activity"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity android:name=".recycleview.OpenRecordActivity" />
-        <activity android:name=".dialog.DialogActivity"></activity>
+        <activity android:name=".dialog.DialogActivity" />
+        <activity android:name=".PopupWindow.PopupWindowActivity"></activity>
+        <activity android:name=".PopupWindow.popupwindowFromGitHup.activity.PopuWindowDemoActivity"></activity>
+        <activity android:name=".PopupWindow.popupwindowFromGitHup.activity.GravityActivity"></activity>
+        <activity android:name=".PopupWindow.popupwindowFromGitHup.activity.PopupActivity"></activity>
     </application>
 
 </manifest>
