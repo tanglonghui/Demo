@@ -17,6 +17,7 @@ import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Function;
 
 public class RxJavaActivity extends AppCompatActivity {
 
@@ -75,6 +76,38 @@ public class RxJavaActivity extends AppCompatActivity {
                 Observable.create(s).subscribe(b);
                 break;
             case R.id.tv_easy2:
+                Observable.create(new ObservableOnSubscribe<Boolean>() {
+                    @Override
+                    public void subscribe(@io.reactivex.annotations.NonNull ObservableEmitter<Boolean> e) throws Exception {
+
+                    }
+                }).map(new Function<Boolean, Boolean>() {
+                    @Override
+                    public Boolean apply(@io.reactivex.annotations.NonNull Boolean aBoolean) throws Exception {
+                        return aBoolean;
+                    }
+                })
+                        .subscribe(new Observer<Boolean>() {
+                            @Override
+                            public void onSubscribe(@io.reactivex.annotations.NonNull Disposable d) {
+
+                            }
+
+                            @Override
+                            public void onNext(@io.reactivex.annotations.NonNull Boolean aBoolean) {
+
+                            }
+
+                            @Override
+                            public void onError(@io.reactivex.annotations.NonNull Throwable e) {
+
+                            }
+
+                            @Override
+                            public void onComplete() {
+
+                            }
+                        });
                 break;
         }
     }
