@@ -43,6 +43,7 @@
             android:name=".AndroidBug5497.AndroidBug5479Activity"
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity android:name=".recycleview.OpenRecordActivity" />
+        <activity android:name=".dialog.DialogActivity"></activity>
     </application>
 
 </manifest>
