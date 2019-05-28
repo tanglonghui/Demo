@@ -11,6 +11,7 @@ import android.webkit.WebView;
 import android.widget.TextView;
 
 import com.example.administrator.demo.AndroidBug5497.AndroidBug5479Activity;
+import com.example.administrator.demo.PopupWindow.PopupWindowActivity;
 import com.example.administrator.demo.PopupWindow.popupwindowFromGitHup.activity.PopuWindowDemoActivity;
 import com.example.administrator.demo.adapter.EasyAdapter;
 import com.example.administrator.demo.date.DateActivity;
@@ -76,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
         mList.add(new EasyModel("单个list多中item view", OpenRecordActivity.class));
         mList.add(new EasyModel("dialog", DialogActivity.class));
         mList.add(new EasyModel("PopuWindowDemoActivity", PopuWindowDemoActivity.class));
+        mList.add(new EasyModel("PopupWindowActivity", PopupWindowActivity.class));
     }
 
     @OnClick(R.id.tv_Test)
