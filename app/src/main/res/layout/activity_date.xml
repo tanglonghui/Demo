@@ -4,9 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.administrator.demo.date.DateActivity">
+
     <TextView
         android:id="@+id/tv_date_to_string"
         style="@style/ContentTextView"
         android:text="date to String" />
+
+    <TextView
+        android:id="@+id/tv_test"
+        style="@style/ContentTextView"
+        android:text="工具类测试" />
 </LinearLayout>
