@@ -44,10 +44,11 @@
             android:windowSoftInputMode="stateHidden|adjustResize" />
         <activity android:name=".recycleview.OpenRecordActivity" />
         <activity android:name=".dialog.DialogActivity" />
-        <activity android:name=".PopupWindow.PopupWindowActivity"></activity>
-        <activity android:name=".PopupWindow.popupwindowFromGitHup.activity.PopuWindowDemoActivity"></activity>
-        <activity android:name=".PopupWindow.popupwindowFromGitHup.activity.GravityActivity"></activity>
-        <activity android:name=".PopupWindow.popupwindowFromGitHup.activity.PopupActivity"></activity>
+        <activity android:name=".PopupWindow.PopupWindowActivity" />
+        <activity android:name=".PopupWindow.popupwindowFromGitHup.activity.PopuWindowDemoActivity" />
+        <activity android:name=".PopupWindow.popupwindowFromGitHup.activity.GravityActivity" />
+        <activity android:name=".PopupWindow.popupwindowFromGitHup.activity.PopupActivity" />
+        <activity android:name=".recycleview.ViewRecycle.ViewActivity"></activity>
     </application>
 
 </manifest>

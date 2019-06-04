@@ -64,7 +64,6 @@ public class DateActivity extends AppCompatActivity {
                 Log.e("DateActivity", "--------------------------测试2----------------------------");
                 Log.e("2", DateUtil.stampTransform(""+System.currentTimeMillis(),DateUtil.Format.ymdFormat1));
                 Log.e("DateActivity", "--------------------------测试3----------------------------");
-                Log.e("2",""+DateUtil.isDateAfter("2019-4-21",DateUtil.Format.ymdFormat1,"2019-4-21",DateUtil.Format.ymdFormat1));
                 Log.e("DateActivity", "--------------------------测试4----------------------------");
                 Log.e("2",""+DateUtil.getStamp("2019-4-21",DateUtil.Format.ymdFormat1));
                 Log.e("2","date > 今天？"+(DateUtil.getStamp("2019-5-31",DateUtil.Format.ymdFormat1)>System.currentTimeMillis()));
