@@ -17,6 +17,7 @@ import com.example.administrator.demo.adapter.EasyAdapter;
 import com.example.administrator.demo.date.DateActivity;
 import com.example.administrator.demo.dialog.DialogActivity;
 import com.example.administrator.demo.model.EasyModel;
+import com.example.administrator.demo.recycleview.CitySelect.CityPickerActivity;
 import com.example.administrator.demo.recycleview.OpenRecordActivity;
 import com.example.administrator.demo.recycleview.ViewRecycle.ViewActivity;
 import com.example.administrator.demo.res.SelectorActivity;
@@ -80,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
         mList.add(new EasyModel("PopuWindowDemoActivity", PopuWindowDemoActivity.class));
         mList.add(new EasyModel("PopupWindowActivity", PopupWindowActivity.class));
         mList.add(new EasyModel("ViewActivity", ViewActivity.class));
+        mList.add(new EasyModel("城市选择", CityPickerActivity.class));
     }
 
     @OnClick(R.id.tv_Test)
