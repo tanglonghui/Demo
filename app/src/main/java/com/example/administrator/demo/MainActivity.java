@@ -16,6 +16,7 @@ import com.example.administrator.demo.PopupWindow.popupwindowFromGitHup.activity
 import com.example.administrator.demo.adapter.EasyAdapter;
 import com.example.administrator.demo.date.DateActivity;
 import com.example.administrator.demo.dialog.DialogActivity;
+import com.example.administrator.demo.json.JsonActivity;
 import com.example.administrator.demo.model.EasyModel;
 import com.example.administrator.demo.recycleview.CitySelect.CityPickerActivity;
 import com.example.administrator.demo.recycleview.OpenRecordActivity;
@@ -82,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
         mList.add(new EasyModel("PopupWindowActivity", PopupWindowActivity.class));
         mList.add(new EasyModel("ViewActivity", ViewActivity.class));
         mList.add(new EasyModel("城市选择", CityPickerActivity.class));
+        mList.add(new EasyModel("json", JsonActivity.class));
     }
 
     @OnClick(R.id.tv_Test)

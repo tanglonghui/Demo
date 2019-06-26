@@ -30,6 +30,8 @@ dependencies {
     //
     //测试用的依赖
     //butterKnife
+    //拼音
+    //gson
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.squareup.retrofit2:retrofit:2.0.2'
@@ -39,9 +41,7 @@ dependencies {
     compile 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
     compile 'com.android.support:recyclerview-v7:26.0.0-alpha1'
     compile 'com.jakewharton:butterknife:8.4.0'
-    //拼音
     compile 'com.belerweb:pinyin4j:2.5.0'
-    //gson
     compile 'com.google.code.gson:gson:2.8.5'
     compile 'com.amap.api:location:latest.integration'
     testCompile 'junit:junit:4.12'
