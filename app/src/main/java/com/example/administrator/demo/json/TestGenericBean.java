@@ -13,6 +13,10 @@ public class TestGenericBean<T> {
     public TestGenericBean(T t) {
         this.t = t;
     }
+    public TestGenericBean() {
+        this.t = (T) new TestBean();
+    }
+
 
     public T getT() {
         return t;
