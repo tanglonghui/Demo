@@ -50,7 +50,8 @@
         <activity android:name=".PopupWindow.popupwindowFromGitHup.activity.PopupActivity" />
         <activity android:name=".recycleview.ViewRecycle.ViewActivity" />
         <activity android:name=".recycleview.CitySelect.CityPickerActivity" />
-        <activity android:name=".json.JsonActivity"></activity>
+        <activity android:name=".json.JsonActivity" />
+        <activity android:name=".thread.ThreadActivity"></activity>
     </application>
 
 </manifest>
