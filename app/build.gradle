@@ -44,6 +44,7 @@ dependencies {
     compile 'com.belerweb:pinyin4j:2.5.0'
     compile 'com.google.code.gson:gson:2.8.5'
     compile 'com.amap.api:location:latest.integration'
+    compile 'com.github.abel533:ECharts:3.0.0.2'
     testCompile 'junit:junit:4.12'
     apt 'com.jakewharton:butterknife-compiler:8.4.0'
 }

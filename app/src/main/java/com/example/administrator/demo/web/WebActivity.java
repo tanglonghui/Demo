@@ -38,9 +38,9 @@ public class WebActivity extends AppCompatActivity {
 //        webView.loadUrl("https://blog.csdn.net/lowprofile_coding/article/details/77928614");
 
 
-        webView.loadUrl("file:///android_asset/test.html");//加载asset文件夹下html
+//        webView.loadUrl("file:///android_asset/test.html");//加载asset文件夹下html
 //        webView.loadUrl("http://139.196.35.30:8080/OkHttpTest/apppackage/test.html");//加载url
-
+        webView.loadUrl("file:///android_asset/doc-example_getting-started.html");//加载asset文件夹下html
         //使用webview显示html代码
 //        webView.loadDataWithBaseURL(null,"<html><head><title> 欢迎您 </title></head>" +
 //                "<body><h2>使用webview显示 html代码</h2></body></html>", "text/html" , "utf-8", null);
