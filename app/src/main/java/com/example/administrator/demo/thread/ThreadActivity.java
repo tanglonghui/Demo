@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 import com.example.administrator.demo.R;
 
+import java.util.Random;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -38,11 +39,15 @@ public class ThreadActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
+    //    ExecutorService executorService = Executors.newFixedThreadPool(4);
     @OnClick({R.id.tv_easy, R.id.tv_easy2})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.tv_easy:
-                ExecutorService executorService = Executors.newFixedThreadPool(4);
+                ThreadA threadA = new ThreadA("甲");
+                ThreadA threadA2 = new ThreadA("乙");
+                threadA.start();
+                threadA2.start();
                 break;
             case R.id.tv_easy2:
                 break;

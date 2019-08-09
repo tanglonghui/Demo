@@ -10,7 +10,7 @@
     <TextView
         android:id="@+id/tv_easy"
         style="@style/ContentTextView"
-        android:text="简单的" />
+        android:text="ThreadA" />
 
     <TextView
         android:id="@+id/tv_easy2"

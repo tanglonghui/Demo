@@ -26,6 +26,7 @@ import com.example.administrator.demo.res.SelectorActivity;
 import com.example.administrator.demo.res.ShapeActivity;
 import com.example.administrator.demo.retrofit.RetrofitActivity;
 import com.example.administrator.demo.rxjava.RxJavaActivity;
+import com.example.administrator.demo.thread.ThreadActivity;
 import com.example.administrator.demo.web.WebActivity;
 import com.example.librarytest.utils.T;
 
@@ -86,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
         mList.add(new EasyModel("城市选择", CityPickerActivity.class));
         mList.add(new EasyModel("json", JsonActivity.class));
         mList.add(new EasyModel("Echarts", EchartsActivity.class));
+        mList.add(new EasyModel(" Thread 线程", ThreadActivity.class));
     }
 
     @OnClick(R.id.tv_Test)

@@ -1,1 +1,1 @@
-include ':app', ':librarytest', ':amvp'
+include ':app', ':librarytest', ':mvp'
