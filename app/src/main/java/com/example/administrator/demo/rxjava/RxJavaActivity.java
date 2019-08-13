@@ -20,6 +20,7 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Function;
 
 public class RxJavaActivity extends AppCompatActivity {
+    public static final String TAG =" RxJava";
 
     @BindView(R.id.tv_easy)
     TextView tvEasy;
@@ -55,22 +56,22 @@ public class RxJavaActivity extends AppCompatActivity {
                 Observer<Integer> b = new Observer<Integer>() {
                     @Override
                     public void onSubscribe(@NonNull Disposable d) {
-                        Log.e("zhao", "onSubscribe: " + d.isDisposed());
+                        Log.e(TAG, "onSubscribe: " + d.isDisposed());
                     }
 
                     @Override
                     public void onNext(@NonNull Integer integer) {
-                        Log.e("zhao", "onNext: " + integer);
+                        Log.e(TAG, "onNext: " + integer);
                     }
 
                     @Override
                     public void onError(@NonNull Throwable e) {
-                        Log.e("zhao", "onError: ");
+                        Log.e(TAG, "onError: ");
                     }
 
                     @Override
                     public void onComplete() {
-                        Log.e("zhao", "onComplete: ");
+                        Log.e(TAG, "onComplete: ");
                     }
                 };
                 Observable.create(s).subscribe(b);
