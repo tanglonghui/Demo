@@ -16,6 +16,7 @@ import com.example.administrator.demo.PopupWindow.popupwindowFromGitHup.activity
 import com.example.administrator.demo.adapter.EasyAdapter;
 import com.example.administrator.demo.date.DateActivity;
 import com.example.administrator.demo.dialog.DialogActivity;
+import com.example.administrator.demo.drawable.DrawableActivity;
 import com.example.administrator.demo.echarts.EchartsActivity;
 import com.example.administrator.demo.json.JsonActivity;
 import com.example.administrator.demo.model.EasyModel;
@@ -88,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
         mList.add(new EasyModel("json", JsonActivity.class));
         mList.add(new EasyModel("Echarts", EchartsActivity.class));
         mList.add(new EasyModel(" Thread 线程", ThreadActivity.class));
+        mList.add(new EasyModel(" Drawable 常见控件属性设置", DrawableActivity.class));
     }
 
     @OnClick(R.id.tv_Test)

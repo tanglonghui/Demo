@@ -52,7 +52,8 @@
         <activity android:name=".recycleview.CitySelect.CityPickerActivity" />
         <activity android:name=".json.JsonActivity" />
         <activity android:name=".thread.ThreadActivity" />
-        <activity android:name=".echarts.EchartsActivity"></activity>
+        <activity android:name=".echarts.EchartsActivity" />
+        <activity android:name=".drawable.DrawableActivity"></activity>
     </application>
 
 </manifest>

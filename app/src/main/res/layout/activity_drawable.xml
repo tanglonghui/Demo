@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.administrator.demo.drawable.DrawableActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_test1"
+            style="@style/ContentTextView"
+            android:text="测试一" />
+
+        <TextView
+            android:id="@+id/tv_test2"
+            style="@style/ContentTextView"
+            android:text="测试二" />
+
+        <TextView
+            android:id="@+id/tv_test3"
+            style="@style/ContentTextView"
+            android:text="测试三" />
+        <TextView
+            android:id="@+id/tv_test4"
+            style="@style/ContentTextView"
+            android:text="测试四" />
+        <TextView
+            android:id="@+id/tv_test5"
+            style="@style/ContentTextView"
+            android:text="测试五" />
+        <TextView
+            android:id="@+id/tv_test6"
+            style="@style/ContentTextView"
+            android:text="测试六" />
+        <TextView
+            android:id="@+id/tv_test7"
+            style="@style/ContentTextView"
+            android:text="测试七" />
+
+        <ImageView
+            android:id="@+id/iv_img"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/image_fun" />
+        <!--通过drwableTop设置的图片，不能在xml中设置他的大小，只能代码设置-->
+        <TextView
+            android:id="@+id/tv_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/ic_launcher"
+            android:text="文字" />
+    </LinearLayout>
+</ScrollView>

@@ -57,6 +57,7 @@ public class RxJavaActivity extends AppCompatActivity {
                     @Override
                     public void onSubscribe(@NonNull Disposable d) {
                         Log.e(TAG, "onSubscribe: " + d.isDisposed());
+
                     }
 
                     @Override
