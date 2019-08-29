@@ -41,6 +41,9 @@ public class RxJavaActivity extends AppCompatActivity {
             case R.id.tv_easy:
                 //两个一拆开就好理解了
                 //被观察者
+                Log.e(TAG,"应用信息："+getApplicationInfo());
+                Log.e(TAG,"应用Id："+getApplicationInfo().packageName);
+                Log.e(TAG,"包名："+getPackageName());
                 ObservableOnSubscribe<Integer> s = new ObservableOnSubscribe<Integer>() {
                     @Override
                     public void subscribe(@NonNull ObservableEmitter<Integer> e) throws Exception {
