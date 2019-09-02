@@ -23,16 +23,46 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
 ext {
+/**
+ * 统一依赖版本管理 方式二
+ * 1.注意格式，是= 等于号 不是 : 分号
+ * 2.无逗号分隔
+ * 3.$supportLibraryVersion 调用当前属性（ext中）
+ */
+    compileSdkVersion = 28
+    buildToolsVersion = '28.0.3'
+
+    minSdkVersion = 15
+    targetSdkVersion = 28
+
+    versionCode = 1
+    versionName = "1.0.1"
+    //依赖
+    supportLibraryVersion= "26.+"
+//
+    SupportV7 = "com.android.support:appcompat-v7:$supportLibraryVersion"
+
+    /**
+     * 统一依赖版本管理 方式三
+     * 1.注意格式，是 : 分号 不是 = 等于号
+     * 2.有逗号分隔！！！
+     * 3.${supportLibraryVersion} 调用当前属性（var中）
+     */
     var = [
-            compileSdkVersion = 25,
-            buildToolsVersion = '25.0.3',
+            compileSdkVersion    : 28,
+            buildToolsVersion    : '28.0.3',
 
-            minSdkVersion = 16,
-            targetSdkVersion = 25,
+            minSdkVersion        : 15,
+            targetSdkVersion     : 28,
 
-            versionCode = 1,
-            versionName = "1.0.1",
+            versionCode          : 1,
+            versionName          : "1.0.1",
+            //依赖
+//            supportLibraryVersion: "26.+",
+
+            SupportV7 : "com.android.support:appcompat-v7:$supportLibraryVersion",
 
     ]
 
