@@ -53,7 +53,8 @@
         <activity android:name=".json.JsonActivity" />
         <activity android:name=".thread.ThreadActivity" />
         <activity android:name=".echarts.EchartsActivity" />
-        <activity android:name=".drawable.DrawableActivity"></activity>
+        <activity android:name=".drawable.DrawableActivity" />
+        <activity android:name=".viewEventDispatch.ViewEventDispatchActivity"></activity>
     </application>
 
 </manifest>

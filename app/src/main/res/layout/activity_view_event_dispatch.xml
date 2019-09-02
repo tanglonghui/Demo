@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.demo.viewEventDispatch.ViewEventDispatchActivity">
+
+    <com.example.administrator.demo.viewEventDispatch.ViewEventDispatchLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.example.administrator.demo.viewEventDispatch.ViewEventDispatchTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="hello world" />
+    </com.example.administrator.demo.viewEventDispatch.ViewEventDispatchLinearLayout>
+
+</LinearLayout>

@@ -2,12 +2,9 @@ package com.example.administrator.demo;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
-import android.webkit.WebView;
 import android.widget.TextView;
 
 import com.example.administrator.demo.AndroidBug5497.AndroidBug5479Activity;
@@ -28,6 +25,7 @@ import com.example.administrator.demo.res.ShapeActivity;
 import com.example.administrator.demo.retrofit.RetrofitActivity;
 import com.example.administrator.demo.rxjava.RxJavaActivity;
 import com.example.administrator.demo.thread.ThreadActivity;
+import com.example.administrator.demo.viewEventDispatch.ViewEventDispatchActivity;
 import com.example.administrator.demo.web.WebActivity;
 import com.example.librarytest.utils.T;
 
@@ -90,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
         mList.add(new EasyModel("Echarts", EchartsActivity.class));
         mList.add(new EasyModel(" Thread 线程", ThreadActivity.class));
         mList.add(new EasyModel(" Drawable 常见控件属性设置", DrawableActivity.class));
+        mList.add(new EasyModel("安卓事件分发机制学习Demo", ViewEventDispatchActivity.class));
     }
 
     @OnClick(R.id.tv_Test)
