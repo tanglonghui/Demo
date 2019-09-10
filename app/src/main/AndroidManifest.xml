@@ -55,7 +55,7 @@
         <activity android:name=".echarts.EchartsActivity" />
         <activity android:name=".drawable.DrawableActivity" />
         <activity android:name=".viewEventDispatch.ViewEventDispatchActivity" />
-        <activity android:name="com.example.administrator.SharedPreferences.SharedPreferencesActivity"></activity>
+        <activity android:name=".SharedPreferences.SharedPreferencesActivity"></activity>
     </application>
 
 </manifest>

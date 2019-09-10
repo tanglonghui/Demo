@@ -7,7 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.TextView;
 
-import com.example.administrator.SharedPreferences.SharedPreferencesActivity;
+import com.example.administrator.demo.SharedPreferences.SharedPreferencesActivity;
 import com.example.administrator.demo.AndroidBug5497.AndroidBug5479Activity;
 import com.example.administrator.demo.PopupWindow.PopupWindowActivity;
 import com.example.administrator.demo.PopupWindow.popupwindowFromGitHup.activity.PopuWindowDemoActivity;
