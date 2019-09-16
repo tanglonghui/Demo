@@ -33,6 +33,10 @@ public class ThreadActivity extends AppCompatActivity {
     TextView tvEasy3;
     @BindView(R.id.tv_easy4)
     TextView tvEasy4;
+    @BindView(R.id.tv_easy5)
+    TextView tvEasy5;
+    @BindView(R.id.tv_easy6)
+    TextView tvEasy6;
     ExecutorService executorService;
 
     @Override
@@ -48,7 +52,7 @@ public class ThreadActivity extends AppCompatActivity {
     }
 
     //    ExecutorService executorService = Executors.newFixedThreadPool(4);
-    @OnClick({R.id.tv_easy, R.id.tv_easy2, R.id.tv_easy3, R.id.tv_easy4})
+    @OnClick({R.id.tv_easy, R.id.tv_easy2, R.id.tv_easy3, R.id.tv_easy4, R.id.tv_easy5, R.id.tv_easy6})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.tv_easy:
@@ -88,6 +92,69 @@ public class ThreadActivity extends AppCompatActivity {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
+                break;
+            case R.id.tv_easy5:
+                final StorageB storage = new StorageB();
+
+                executorService.submit(new Runnable() {
+                    @Override
+                    public void run() {
+                        for (int i = 0; i < 20; i++) {
+                            storage.write(i);
+                            Log.e("当前线程：" + Thread.currentThread().getName() + " 存 ：", "" + i);
+                            try {
+                                Thread.sleep(1000);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }
+                });
+                executorService.submit(new Runnable() {
+                    @Override
+                    public void run() {
+                        for (int i = 0; i < 20; i++) {
+                            Log.e("当前线程：" + Thread.currentThread().getName() + " 取 ：", storage.read(i).toString());
+                            try {
+                                Thread.sleep(1000);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }
+                });
+                break;
+            case R.id.tv_easy6:
+                final Thread thread3 = new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        for (int i = 0; i < 20; i++) {
+                            Log.e("当前线程：" + Thread.currentThread().getName(), "运行" + i);
+                        }
+                        Log.e("当前线程：" + Thread.currentThread().getName(), "运行结束");
+                    }
+                });
+                thread3.setName("A");
+                Thread thread4 = new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        for (int i = 0; i < 10; i++) {
+                            Log.e("当前线程：" + Thread.currentThread().getName(), "运行" + i);
+                            if (i == 5) {
+                                try {
+                                    //在此节点之后，thread4 进入阻塞状态，要等待 thread3 执行完毕之后才会继续执行（转为就绪状态）
+                                    thread3.join();
+                                } catch (InterruptedException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                        }
+                        Log.e("当前线程：" + Thread.currentThread().getName(), "运行结束");
+                    }
+                });
+                thread4.setName("B");
+                thread3.start();
+                thread4.start();
                 break;
         }
     }

@@ -26,4 +26,14 @@
         android:id="@+id/tv_easy4"
         style="@style/ContentTextView"
         android:text="线程池" />
+
+    <TextView
+        android:id="@+id/tv_easy5"
+        style="@style/ContentTextView"
+        android:text="锁 synchronized wait notify等" />
+
+    <TextView
+        android:id="@+id/tv_easy6"
+        style="@style/ContentTextView"
+        android:text="join" />
 </LinearLayout>
