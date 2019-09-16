@@ -14,8 +14,8 @@ public class ThreadA extends Thread {
 
     @Override
     public void run() {
-        for (int i = 0; i < 1000; i++) {
-            Log.e("ThrandA "+getName()+" 打印：", "" + i);
+        for (int i = 0; i < 10; i++) {
+            Log.e("当前线程：" + Thread.currentThread() + " 参数：" + getName() + " 打印：", "" + i);
         }
     }
 }

@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.TextView;
 
+import com.example.administrator.demo.SharedPreferences.SharedPreferencesActivity;
 import com.example.administrator.demo.AndroidBug5497.AndroidBug5479Activity;
 import com.example.administrator.demo.PopupWindow.PopupWindowActivity;
 import com.example.administrator.demo.PopupWindow.popupwindowFromGitHup.activity.PopuWindowDemoActivity;
@@ -89,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
         mList.add(new EasyModel(" Thread 线程", ThreadActivity.class));
         mList.add(new EasyModel(" Drawable 常见控件属性设置", DrawableActivity.class));
         mList.add(new EasyModel("安卓事件分发机制学习Demo", ViewEventDispatchActivity.class));
+        mList.add(new EasyModel("SharedPreferencesDemo", SharedPreferencesActivity.class));
     }
 
     @OnClick(R.id.tv_Test)

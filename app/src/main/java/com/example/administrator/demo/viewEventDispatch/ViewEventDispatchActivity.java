@@ -31,7 +31,7 @@ public class ViewEventDispatchActivity extends AppCompatActivity {
     public boolean dispatchTouchEvent(MotionEvent ev) {
         switch (ev.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                Log.e(this.getClass().getSimpleName(), " dispatchTouchEvent--" );
+                Log.e(this.getClass().getSimpleName(), " dispatchTouchEvent--");
                 break;
             case MotionEvent.ACTION_MOVE:
 
@@ -50,7 +50,7 @@ public class ViewEventDispatchActivity extends AppCompatActivity {
     public boolean onTouchEvent(MotionEvent ev) {
         switch (ev.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                Log.e(this.getClass().getSimpleName(), " onTouchEvent--" );
+                Log.e(this.getClass().getSimpleName(), " onTouchEvent--");
                 break;
             case MotionEvent.ACTION_MOVE:
 
