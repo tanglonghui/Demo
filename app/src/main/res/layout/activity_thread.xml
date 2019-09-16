@@ -10,10 +10,20 @@
     <TextView
         android:id="@+id/tv_easy"
         style="@style/ContentTextView"
-        android:text="ThreadA" />
+        android:text="继承 Thread 实现线程" />
 
     <TextView
         android:id="@+id/tv_easy2"
         style="@style/ContentTextView"
-        android:text="中等的" />
+        android:text="实现 Runnable 接口实现线程" />
+
+    <TextView
+        android:id="@+id/tv_easy3"
+        style="@style/ContentTextView"
+        android:text="实现 Callable 接口实现线程" />
+
+    <TextView
+        android:id="@+id/tv_easy4"
+        style="@style/ContentTextView"
+        android:text="线程池" />
 </LinearLayout>
