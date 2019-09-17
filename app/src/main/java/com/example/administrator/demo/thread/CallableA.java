@@ -7,7 +7,7 @@ import java.util.concurrent.Callable;
 /**
  * @author TangLongHui
  * @data created on 2019/9/16.
- * @describe TODO
+ * @describe TODO 与 Runnable 类似，区别是，这个接口带返回结果
  */
 public class CallableA implements Callable {
     @Override
