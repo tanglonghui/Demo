@@ -7,15 +7,16 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.TextView;
 
-import com.example.administrator.demo.SharedPreferences.SharedPreferencesActivity;
 import com.example.administrator.demo.AndroidBug5497.AndroidBug5479Activity;
 import com.example.administrator.demo.PopupWindow.PopupWindowActivity;
 import com.example.administrator.demo.PopupWindow.popupwindowFromGitHup.activity.PopuWindowDemoActivity;
+import com.example.administrator.demo.SharedPreferences.SharedPreferencesActivity;
 import com.example.administrator.demo.adapter.EasyAdapter;
 import com.example.administrator.demo.date.DateActivity;
 import com.example.administrator.demo.dialog.DialogActivity;
 import com.example.administrator.demo.drawable.DrawableActivity;
 import com.example.administrator.demo.echarts.EchartsActivity;
+import com.example.administrator.demo.io.IOActivity;
 import com.example.administrator.demo.json.JsonActivity;
 import com.example.administrator.demo.model.EasyModel;
 import com.example.administrator.demo.recycleview.CitySelect.CityPickerActivity;
@@ -91,6 +92,7 @@ public class MainActivity extends AppCompatActivity {
         mList.add(new EasyModel(" Drawable 常见控件属性设置", DrawableActivity.class));
         mList.add(new EasyModel("安卓事件分发机制学习Demo", ViewEventDispatchActivity.class));
         mList.add(new EasyModel("SharedPreferencesDemo", SharedPreferencesActivity.class));
+        mList.add(new EasyModel("文件操作 IO 流", IOActivity.class));
     }
 
     @OnClick(R.id.tv_Test)
