@@ -114,7 +114,7 @@ public class IOActivity extends AppCompatActivity {
                 linkedList.add(1);
                 linkedList.poll();
                 linkedList.add(2);
-
+//                File file =new File();
                 break;
             case R.id.tv_easy3:
                 break;
