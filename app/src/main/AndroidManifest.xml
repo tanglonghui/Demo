@@ -56,7 +56,8 @@
         <activity android:name=".drawable.DrawableActivity" />
         <activity android:name=".viewEventDispatch.ViewEventDispatchActivity" />
         <activity android:name=".SharedPreferences.SharedPreferencesActivity" />
-        <activity android:name=".io.IOActivity"></activity>
+        <activity android:name=".io.IOActivity" />
+        <activity android:name=".viewLocation.ViewLocationActivity"></activity>
     </application>
 
 </manifest>

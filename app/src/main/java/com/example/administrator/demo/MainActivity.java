@@ -28,6 +28,7 @@ import com.example.administrator.demo.retrofit.RetrofitActivity;
 import com.example.administrator.demo.rxjava.RxJavaActivity;
 import com.example.administrator.demo.thread.ThreadActivity;
 import com.example.administrator.demo.viewEventDispatch.ViewEventDispatchActivity;
+import com.example.administrator.demo.viewLocation.ViewLocationActivity;
 import com.example.administrator.demo.web.WebActivity;
 import com.example.librarytest.utils.T;
 
@@ -93,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
         mList.add(new EasyModel("安卓事件分发机制学习Demo", ViewEventDispatchActivity.class));
         mList.add(new EasyModel("SharedPreferencesDemo", SharedPreferencesActivity.class));
         mList.add(new EasyModel("文件操作 IO 流", IOActivity.class));
+        mList.add(new EasyModel("view 的移动与定位", ViewLocationActivity.class));
     }
 
     @OnClick(R.id.tv_Test)
