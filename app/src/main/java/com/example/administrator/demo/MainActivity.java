@@ -26,6 +26,8 @@ import com.example.administrator.demo.res.SelectorActivity;
 import com.example.administrator.demo.res.ShapeActivity;
 import com.example.administrator.demo.retrofit.RetrofitActivity;
 import com.example.administrator.demo.rxjava.RxJavaActivity;
+import com.example.administrator.demo.test.testPaper.TestPaperActivity;
+import com.example.administrator.demo.testPaper.MyTestPaperActivity;
 import com.example.administrator.demo.thread.ThreadActivity;
 import com.example.administrator.demo.viewEventDispatch.ViewEventDispatchActivity;
 import com.example.administrator.demo.viewLocation.ViewLocationActivity;
@@ -95,6 +97,8 @@ public class MainActivity extends AppCompatActivity {
         mList.add(new EasyModel("SharedPreferencesDemo", SharedPreferencesActivity.class));
         mList.add(new EasyModel("文件操作 IO 流", IOActivity.class));
         mList.add(new EasyModel("view 的移动与定位", ViewLocationActivity.class));
+        mList.add(new EasyModel("关于试卷开发的想法,草稿", TestPaperActivity.class));
+        mList.add(new EasyModel("关于试卷开发的想法,具体一点", MyTestPaperActivity.class));
     }
 
     @OnClick(R.id.tv_Test)
