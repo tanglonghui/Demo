@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.administrator.demo.thread.ThreadActivity">
+
+    <TextView
+        android:id="@+id/tv_easy"
+        style="@style/ContentTextView"
+        android:text="安卓内存结构" />
+
+    <TextView
+        android:id="@+id/tv_easy2"
+        style="@style/ContentTextView"
+        android:text="实现 Runnable 接口实现线程" />
+
+    <TextView
+        android:id="@+id/tv_easy3"
+        style="@style/ContentTextView"
+        android:text="实现 Callable 接口实现线程" />
+
+    <TextView
+        android:id="@+id/tv_easy4"
+        style="@style/ContentTextView"
+        android:text="线程池" />
+
+    <TextView
+        android:id="@+id/tv_easy5"
+        style="@style/ContentTextView"
+        android:text="锁 synchronized wait notify等" />
+
+    <TextView
+        android:id="@+id/tv_easy6"
+        style="@style/ContentTextView"
+        android:text="join" />
+</LinearLayout>
