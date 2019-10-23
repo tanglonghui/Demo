@@ -60,6 +60,7 @@
         <activity android:name=".viewLocation.ViewLocationActivity" />
         <activity android:name=".test.testPaper.TestPaperActivity" />
         <activity android:name=".testPaper.MyTestPaperActivity"></activity>
+        <activity android:name="com.example.administrator.kotlin.HelloKotlinActivity"></activity>
     </application>
 
 </manifest>
