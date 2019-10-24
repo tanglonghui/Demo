@@ -47,7 +47,7 @@ public class RichTextActivity extends AppCompatActivity {
         Spanned spanned = Html.fromHtml(str);
         tvTest1.setText(spanned);
 
-        String content = getBlueText("盖聂, 卫庄, 张良, 天明") + "等 <font color=\"#FF0000\">88人</font>觉得很赞";
+        String content = getBlueText("\t\t盖聂, 卫庄, 张良, 天明") + "等 <font color=\"#FF0000\">88人</font>觉得很赞";
         tvTest2.setText(Html.fromHtml(content));
     }
 
