@@ -20,13 +20,41 @@
         android:layout_height="wrap_content" />
 
     <TextView
+        android:id="@+id/tv_test2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="方式二" />
 
     <TextView
-        android:id="@+id/tv_test2"
+        android:id="@+id/tv_test3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@mipmap/prompt"
+        android:gravity="center"
+        android:text="方式二\
+
+" />
+
+    <RadioButton
+        android:id="@+id/etc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:button="@mipmap/prompt"
+        android:checked="false"
+        android:clickable="false"
+        android:gravity="top"
+        android:paddingLeft="2dp"
+        android:text="备注：我是Radiobutton我是Radiobutton我是Radiobutton我是Radiobutton我是Radiobutton我是Radiobutton我是Radiobutton我是Radiobutton我是Radiobutton我是Radiobutton我是Radiobutton"
+        android:textSize="13sp" />
+
 </LinearLayout>

@@ -25,6 +25,7 @@ import com.example.administrator.demo.recycleview.ViewRecycle.ViewActivity;
 import com.example.administrator.demo.res.SelectorActivity;
 import com.example.administrator.demo.res.ShapeActivity;
 import com.example.administrator.demo.retrofit.RetrofitActivity;
+import com.example.administrator.demo.rich_text.RichTextActivity;
 import com.example.administrator.demo.rxjava.RxJavaActivity;
 import com.example.administrator.demo.test.testPaper.TestPaperActivity;
 import com.example.administrator.demo.testPaper.MyTestPaperActivity;
@@ -101,6 +102,7 @@ public class MainActivity extends AppCompatActivity {
         mList.add(new EasyModel("关于试卷开发的想法,草稿", TestPaperActivity.class));
         mList.add(new EasyModel("关于试卷开发的想法,具体一点", MyTestPaperActivity.class));
         mList.add(new EasyModel("kotlin hello", HelloKotlinActivity.class));
+        mList.add(new EasyModel("富文本，图文混排", RichTextActivity.class));
     }
 
     @OnClick(R.id.tv_Test)
