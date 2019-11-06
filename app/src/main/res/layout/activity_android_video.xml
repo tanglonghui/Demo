@@ -4,10 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#5e8467"
     tools:context="com.example.administrator.demo.video.AndroidVideoActivity">
 
-    <VideoView
-        android:id="@+id/vv_video"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dimen_200_dip" />
+        android:layout_height="wrap_content">
+
+        <VideoView
+            android:id="@+id/vv_video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
 </LinearLayout>

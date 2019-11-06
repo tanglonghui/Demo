@@ -30,6 +30,7 @@ import com.example.administrator.demo.rxjava.RxJavaActivity;
 import com.example.administrator.demo.test.testPaper.TestPaperActivity;
 import com.example.administrator.demo.testPaper.MyTestPaperActivity;
 import com.example.administrator.demo.thread.ThreadActivity;
+import com.example.administrator.demo.video.AndroidVideoActivity;
 import com.example.administrator.demo.viewEventDispatch.ViewEventDispatchActivity;
 import com.example.administrator.demo.viewLocation.ViewLocationActivity;
 import com.example.administrator.demo.web.WebActivity;
@@ -103,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
         mList.add(new EasyModel("关于试卷开发的想法,具体一点", MyTestPaperActivity.class));
         mList.add(new EasyModel("kotlin hello", HelloKotlinActivity.class));
         mList.add(new EasyModel("富文本，图文混排", RichTextActivity.class));
+        mList.add(new EasyModel("视频播放合集", AndroidVideoActivity.class));
     }
 
     @OnClick(R.id.tv_Test)
