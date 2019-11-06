@@ -16,4 +16,8 @@
         android:id="@+id/tv_2"
         style="@style/ContentTextView"
         android:text="样式二" />
+    <TextView
+        android:id="@+id/tv_3"
+        style="@style/ContentTextView"
+        android:text="样式三AlertDialog" />
 </LinearLayout>
