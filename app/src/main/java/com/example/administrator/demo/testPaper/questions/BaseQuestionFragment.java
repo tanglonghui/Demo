@@ -14,7 +14,7 @@ import com.example.administrator.demo.testPaper.bean.StudentQuestionBean;
 /**
  * @author TangLongHui
  * @data created on 2019/10/8
- * @describe TODO 翻转课堂问题基类
+ * @describe   翻转课堂问题基类
  */
 public abstract class BaseQuestionFragment extends Fragment {
 

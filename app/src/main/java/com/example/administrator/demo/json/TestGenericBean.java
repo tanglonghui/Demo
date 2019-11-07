@@ -5,7 +5,7 @@ import com.example.librarytest.utils.T;
 /**
  * @author TangLongHui
  * @data created on 2019/6/26.
- * @describe TODO
+ * @describe
  */
 public class TestGenericBean<T> {
     private T t;

@@ -11,7 +11,7 @@ import com.example.librarytest.utils.T;
 /**
  * @author TangLongHui
  * @data created on 2019/9/2
- * @describe TODO 学习事件分发
+ * @describe   学习事件分发
  */
 
 public class ViewEventDispatchActivity extends AppCompatActivity {

@@ -9,7 +9,7 @@ import android.view.ViewConfiguration;
 /**
  * @author TangLongHui
  * @data created on 2019/8/22.
- * @describe TODO 解决了横向滑动的 刷新
+ * @describe   解决了横向滑动的 刷新
  */
 public class MySwipeRefreshLayout extends SwipeRefreshLayout{
     private float startX;

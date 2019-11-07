@@ -11,7 +11,7 @@ import java.util.Locale;
 /**
  * @author TangLongHui
  * @data created on 2019/1/12 .
- * @describe TODO 获得打开文件的intent工具类，使用前提配置了7.0版本之后的FileProvider
+ * @describe   获得打开文件的intent工具类，使用前提配置了7.0版本之后的FileProvider
  */
 public class OpenFileUtil {
     private static String applicationId = "";

@@ -7,7 +7,7 @@ import java.util.Date;
 /**
  * @author TangLongHui
  * @data created on 2019/5/30.
- * @describe TODO 时间工具类
+ * @describe   时间工具类
  */
 public class DateUtil {
     //按需求增加静态实例
@@ -21,14 +21,14 @@ public class DateUtil {
     private static final SimpleDateFormat yMdHmsFormat1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
     private static final SimpleDateFormat hmsFormat1 = new SimpleDateFormat("HH:mm:ss");
     /**
-     * @Description: TODO 指定时间格式的枚举
+     * @Description:   指定时间格式的枚举
      */
     public enum Format {
         ymdFormat1, ymdFormat2,ymdFormat3,hmFormat1,mdFormat1,yMdHmsFormat1,ymdFormat4,mdFormat2,hmsFormat1
     }
 
     /**
-     * @Description: TODO 通过枚举获得对应格式的时间对象
+     * @Description:   通过枚举获得对应格式的时间对象
      * @return: {@link SimpleDateFormat}
      * @param: {@link Format}
      */
@@ -57,7 +57,7 @@ public class DateUtil {
     }
 
     /**
-     * @Description: TODO 转换时间格式
+     * @Description:   转换时间格式
      * @return: 转换后的时间 String
      * @param: {@link Format}
      */
@@ -73,7 +73,7 @@ public class DateUtil {
     }
 
     /**
-     * @Description: TODO 将时间戳(字符串)按指定格式转换为时间
+     * @Description:   将时间戳(字符串)按指定格式转换为时间
      * @return: 转换后的时间 String
      * @param: {@link Format}
      */
@@ -82,7 +82,7 @@ public class DateUtil {
     }
 
     /**
-     * @Description: TODO 将时间戳(long)按指定格式转换为时间
+     * @Description:   将时间戳(long)按指定格式转换为时间
      * @return: 转换后的时间 String
      * @param: {@link Format}
      */
@@ -91,7 +91,7 @@ public class DateUtil {
     }
 
     /**
-     * @Description: TODO 将时间（字符串）转换为时间戳(long)
+     * @Description:   将时间（字符串）转换为时间戳(long)
      * @return: 转换后的时间 long
      * @param: {@link Format}
      */

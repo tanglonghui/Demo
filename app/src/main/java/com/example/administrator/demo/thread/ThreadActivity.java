@@ -20,7 +20,7 @@ import butterknife.OnClick;
 /**
  * @author TangLongHui
  * @data created on 2019/8/1
- * @describe TODO ~~
+ * @describe   ~~
  */
 
 public class ThreadActivity extends AppCompatActivity {

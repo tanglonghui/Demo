@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * @author TangLongHui
  * @data created on 2019/9/16.
- * @describe TODO
+ * @describe
  */
 public class StorageB {
     public ArrayList<Integer> list;

@@ -18,7 +18,7 @@ import android.widget.Scroller;
  * <p>
  * Created by DavidChen on 2018/5/29.
  * Modified by tlh on 2019/5/8
- * @describe TODO 支持侧滑删除的XRecycleView
+ * @describe   支持侧滑删除的XRecycleView
  */
 
 public class SlideRecyclerView extends RecyclerView {

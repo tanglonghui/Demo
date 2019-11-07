@@ -17,7 +17,7 @@ import butterknife.ButterKnife;
 /**
  * @author TangLongHui
  * @data created on 2019/5/5
- * @describe TODO 一个简单的适配器
+ * @describe   一个简单的适配器
  */
 
 public class EasyAdapter extends RecyclerView.Adapter<EasyAdapter.ViewHolder> {

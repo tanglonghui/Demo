@@ -8,7 +8,7 @@ import android.view.MotionEvent;
 /**
  * @author TangLongHui
  * @data created on 2019/9/2.
- * @describe TODO 学习事件分发
+ * @describe   学习事件分发
  */
 public class ViewEventDispatchTextView extends android.support.v7.widget.AppCompatTextView {
     private String TAG = "VEDispatchTextView";

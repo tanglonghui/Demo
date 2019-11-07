@@ -11,7 +11,7 @@ import com.example.administrator.demo.testPaper.bean.FlippedClassroomTestPaperIn
 /**
  * @author TangLongHui
  * @data created on 2019/10/8.
- * @describe TODO 简答题
+ * @describe   简答题
  */
 public class ShortAnswerQuestionFragment extends BaseQuestionFragment {
     private TextView tvQuestion;

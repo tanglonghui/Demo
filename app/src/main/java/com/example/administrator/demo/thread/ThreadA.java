@@ -5,7 +5,7 @@ import android.util.Log;
 /**
  * @author TangLongHui
  * @data created on 2019/8/9.
- * @describe TODO
+ * @describe
  */
 public class ThreadA extends Thread {
     public ThreadA(String name) {

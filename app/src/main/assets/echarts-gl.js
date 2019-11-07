@@ -356,7 +356,7 @@ function convertTextureToPowerOfTwo(texture) {
  * @param {Object} [textureOpts]
  * @param {Function} cb
  */
-// TODO Promise, test
+//   Promise, test
 graphicGL.loadTexture = function (imgValue, api, textureOpts, cb) {
     if (typeof textureOpts === 'function') {
         cb = textureOpts;
@@ -415,7 +415,7 @@ graphicGL.loadTexture = function (imgValue, api, textureOpts, cb) {
             textureCache.put(prefix + id, textureObj);
 
             convertTextureToPowerOfTwo(textureObj.texture);
-            // TODO Next tick?
+            //   Next tick?
             cb && cb(textureObj.texture);
         }
         return textureObj.texture;
@@ -428,7 +428,7 @@ graphicGL.loadTexture = function (imgValue, api, textureOpts, cb) {
                 textureObj.callbacks.push(cb);
             }
             else {
-                // TODO Next tick?
+                //   Next tick?
                 cb && cb(textureObj.texture);
             }
         }
@@ -507,7 +507,7 @@ graphicGL.createAmbientCubemap = function (opt, renderer, api, cb) {
     ambientCubemap.cubemap = graphicGL.loadTexture(textureUrl, api, {
         exposure: exposure
     }, function () {
-        // TODO Performance when multiple view
+        //   Performance when multiple view
         ambientCubemap.cubemap.flipY = false;
         if (true) {
             var time = Date.now();
@@ -523,7 +523,7 @@ graphicGL.createAmbientCubemap = function (opt, renderer, api, cb) {
 
         cb && cb();
 
-        // TODO Refresh ?
+        //   Refresh ?
     });
 
     return {
@@ -685,7 +685,7 @@ graphicGL.setMaterialFromModel = function (shading, material, model, api) {
         var roughness = materialModel.get('roughness');
         var metalness = materialModel.get('metalness');
         if (metalness != null) {
-            // Try to treat as a texture, TODO More check
+            // Try to treat as a texture,   More check
             if (isNaN(metalness)) {
                 material.setTextureImage('metalnessMap', metalness, api, textureOpt);
                 metalness = __WEBPACK_IMPORTED_MODULE_16__retrieve__["a" /* default */].firstNotNull(materialModel.get('metalnessAdjust'), 0.5);
@@ -696,7 +696,7 @@ graphicGL.setMaterialFromModel = function (shading, material, model, api) {
             metalness = 0;
         }
         if (roughness != null) {
-            // Try to treat as a texture, TODO More check
+            // Try to treat as a texture,   More check
             if (isNaN(roughness)) {
                 material.setTextureImage('roughnessMap', roughness, api, textureOpt);
                 roughness = __WEBPACK_IMPORTED_MODULE_16__retrieve__["a" /* default */].firstNotNull(materialModel.get('roughnessAdjust'), 0.5);
@@ -1876,7 +1876,7 @@ Object.defineProperties(Vector3, {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_Cache__ = __webpack_require__(57);
 /**
  * Base class for all textures like compressed texture, texture2d, texturecube
- * TODO mapping
+ *   mapping
  */
 
 
@@ -2347,7 +2347,7 @@ var Texture2D = __WEBPACK_IMPORTED_MODULE_0__Texture__["a" /* default */].extend
         /**
          * @type {?HTMLImageElement|HTMLCanvasElemnet}
          */
-        // TODO mark dirty when assigned.
+        //   mark dirty when assigned.
         image: null,
         /**
          * Pixels data. Will be ignored if image is set.
@@ -3019,7 +3019,7 @@ Shader.prototype = {
 
     _addSemanticUniform: function (symbol, uniformType, semantic) {
         // This case is only for SKIN_MATRIX
-        // TODO
+        //
         if (attributeSemantics.indexOf(semantic) >= 0) {
             this.attributeSemantics[semantic] = {
                 symbol: symbol,
@@ -3101,7 +3101,7 @@ Shader.prototype = {
                     }
 
                     if (semantic) {
-                        // TODO Should not declare multiple symbols if have semantic.
+                        //   Should not declare multiple symbols if have semantic.
                         self._addSemanticUniform(symbol, uniformType, semantic);
                     }
                     else {
@@ -3132,12 +3132,12 @@ Shader.prototype = {
             for (var symbol in declaredAttributes) {
                 var semantic = declaredAttributes[symbol].semantic;
                 attributes[symbol] = {
-                    // TODO Can only be float
+                    //   Can only be float
                     type: 'float',
                     size: size,
                     semantic: semantic || null
                 };
-                // TODO Should not declare multiple symbols if have semantic.
+                //   Should not declare multiple symbols if have semantic.
                 if (semantic) {
                     if (attributeSemantics.indexOf(semantic) < 0) {
                         throw new Error('Unkown semantic "' + semantic + '"');
@@ -3720,7 +3720,7 @@ if (defineProperty) {
             return this._axisZ;
         },
         set: function (v) {
-            // TODO Here has a problem
+            //   Here has a problem
             // If only set an item of vector will not work
             var el = this.array;
             v = v.array;
@@ -4135,7 +4135,7 @@ var FrameBuffer = __WEBPACK_IMPORTED_MODULE_0__core_Base__["a" /* default */].ex
             hasTextureAttached = true;
             var obj = this._textures[attachment];
             if (obj) {
-                // TODO Do width, height checking, make sure size are same
+                //   Do width, height checking, make sure size are same
                 width = obj.texture.width;
                 height = obj.texture.height;
                 // Attach textures
@@ -4263,7 +4263,7 @@ var FrameBuffer = __WEBPACK_IMPORTED_MODULE_0__core_Base__["a" /* default */].ex
         if (!texture.width) {
             throw new Error('The texture attached to color buffer is not a valid.');
         }
-        // TODO width and height check
+        //   width and height check
 
         // If the depth_texture extension is enabled, developers
         // Can attach a depth texture to the depth buffer
@@ -4388,7 +4388,7 @@ var FrameBuffer = __WEBPACK_IMPORTED_MODULE_0__core_Base__["a" /* default */].ex
      * @param  {number} [target=gl.TEXTURE_2D]
      */
     detach: function (attachment, target) {
-        // TODO depth extension check ?
+        //   depth extension check ?
         this._textures[attachment] = null;
         if (this._boundRenderer) {
             var cache = this._cache;
@@ -5227,7 +5227,7 @@ vec3.normalize = function(out, a) {
         z = a[2];
     var len = x*x + y*y + z*z;
     if (len > 0) {
-        //TODO: evaluate use of glm_invsqrt here?
+        // : evaluate use of glm_invsqrt here?
         len = 1 / Math.sqrt(len);
         out[0] = a[0] * len;
         out[1] = a[1] * len;
@@ -12058,7 +12058,7 @@ vec4.lerp = function (out, a, b, t) {
 vec4.random = function (out, scale) {
     scale = scale || 1.0;
 
-    //TODO: This is a pretty awful way of doing this. Find something better.
+    // : This is a pretty awful way of doing this. Find something better.
     out[0] = Object(__WEBPACK_IMPORTED_MODULE_0__common__["c" /* GLMAT_RANDOM */])();
     out[1] = Object(__WEBPACK_IMPORTED_MODULE_0__common__["c" /* GLMAT_RANDOM */])();
     out[2] = Object(__WEBPACK_IMPORTED_MODULE_0__common__["c" /* GLMAT_RANDOM */])();
@@ -12962,7 +12962,7 @@ var Node = __WEBPACK_IMPORTED_MODULE_0__core_Base__["a" /* default */].extend(/*
         if (!path) {
             return;
         }
-        // TODO Name have slash ?
+        //   Name have slash ?
         var pathArr = path.split('/');
         var current = this;
         for (var i = 0; i < pathArr.length; i++) {
@@ -13190,7 +13190,7 @@ var Node = __WEBPACK_IMPORTED_MODULE_0__core_Base__["a" /* default */].extend(/*
      * @param  {clay.BoundingBox} [out]
      * @return {clay.BoundingBox}
      */
-    // TODO Skinning
+    //   Skinning
     getBoundingBox: (function () {
         function defaultFilter (el) {
             return !el.invisible && el.geometry;
@@ -13278,7 +13278,7 @@ var Node = __WEBPACK_IMPORTED_MODULE_0__core_Base__["a" /* default */].extend(/*
         var v = new __WEBPACK_IMPORTED_MODULE_1__math_Vector3__["a" /* default */]();
         var RTMatrix = new __WEBPACK_IMPORTED_MODULE_3__math_Matrix4__["a" /* default */]();
 
-        // TODO improve performance
+        //   improve performance
         return function (point, axis, angle) {
 
             v.copy(this.position).subtract(point);
@@ -13628,7 +13628,7 @@ var Scene = __WEBPACK_IMPORTED_MODULE_0__Node__["a" /* default */].extend(functi
         if (parent.invisible) {
             return;
         }
-        // TODO Optimize
+        //   Optimize
         for (var i = 0; i < parent._children.length; i++) {
             var child = parent._children[i];
 
@@ -14245,7 +14245,7 @@ var Perspective = __WEBPACK_IMPORTED_MODULE_0__Camera__["a" /* default */].exten
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Material__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Texture__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__shader_source_skybox_glsl_js__ = __webpack_require__(121);
-// TODO Should not derived from mesh?
+//   Should not derived from mesh?
 
 
 
@@ -14475,7 +14475,7 @@ var Plane = __WEBPACK_IMPORTED_MODULE_0__Geometry__["a" /* default */].extend(
 
         viewControl: {
             // perspective, orthographic.
-            // TODO Isometric
+            //   Isometric
             projection: 'perspective',
             // If rotate on on init
             autoRotate: false,
@@ -14566,7 +14566,7 @@ var Plane = __WEBPACK_IMPORTED_MODULE_0__Geometry__["a" /* default */].extend(
  * @author Yi Shen(http://github.com/pissang)
  */
 
-// TODO Remove magic numbers on sensitivity
+//   Remove magic numbers on sensitivity
 
 
 
@@ -15976,7 +15976,7 @@ var CompositorNode = __WEBPACK_IMPORTED_MODULE_0__core_Base__["a" /* default */]
 /** @lends clay.compositor.CompositorNode.prototype */
 {
 
-    // TODO Remove parameter function callback
+    //   Remove parameter function callback
     updateParameter: function (outputName, renderer) {
         var outputInfo = this.outputs[outputName];
         var parameters = outputInfo.parameters;
@@ -16064,7 +16064,7 @@ var CompositorNode = __WEBPACK_IMPORTED_MODULE_0__core_Base__["a" /* default */]
             }
         }
         else if (
-            // TODO
+            //
             this._rendering   // Solve Circular Reference
         ) {
             if (!this._prevOutputTextures[name]) {
@@ -16341,7 +16341,7 @@ module.exports = _default;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__shader_source_prez_glsl_js__ = __webpack_require__(71);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__glmatrix_mat4__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__glmatrix_vec3__ = __webpack_require__(12);
-// TODO Resources like shader, texture, geometry reference management
+//   Resources like shader, texture, geometry reference management
 // Trace and find out which shader, texture, geometry can be destroyed
 
 
@@ -16401,7 +16401,7 @@ function PlaceHolderTexture(renderer) {
     var webglTexture;
     this.bind = function (renderer) {
         if (!blankCanvas) {
-            // TODO Environment not support createCanvas.
+            //   Environment not support createCanvas.
             blankCanvas = __WEBPACK_IMPORTED_MODULE_3__core_vendor__["a" /* default */].createCanvas();
             blankCanvas.width = blankCanvas.height = 1;
             blankCanvas.getContext('2d');
@@ -17005,7 +17005,7 @@ var Renderer = __WEBPACK_IMPORTED_MODULE_0__core_Base__["a" /* default */].exten
             var drawIDChanged = currentDrawID !== drawID;
             drawID = currentDrawID;
             if (drawIDChanged && vaoExt) {
-                // TODO Seems need to be bound to null immediately (or before bind another program?) if vao is changed
+                //   Seems need to be bound to null immediately (or before bind another program?) if vao is changed
                 vaoExt.bindVertexArrayOES(null);
             }
             if (isSceneNode) {
@@ -17047,7 +17047,7 @@ var Renderer = __WEBPACK_IMPORTED_MODULE_0__core_Base__["a" /* default */].exten
                 program.setUniformOfSemantic(_gl, 'VIEWPORT_SIZE', viewportSizeUniform);
 
                 // Set lights uniforms
-                // TODO needs optimized
+                //   needs optimized
                 if (scene) {
                     scene.setLightUniforms(program, renderable.lightGroup, this);
                 }
@@ -17072,7 +17072,7 @@ var Renderer = __WEBPACK_IMPORTED_MODULE_0__core_Base__["a" /* default */].exten
                     material.transparent ? _gl.enable(_gl.BLEND) : _gl.disable(_gl.BLEND);
                     transparent = material.transparent;
                 }
-                // TODO cache blending
+                //   cache blending
                 if (material.transparent) {
                     if (material.blend) {
                         material.blend(_gl);
@@ -17119,7 +17119,7 @@ var Renderer = __WEBPACK_IMPORTED_MODULE_0__core_Base__["a" /* default */].exten
                 culling = renderable.culling;
                 culling ? _gl.enable(_gl.CULL_FACE) : _gl.disable(_gl.CULL_FACE);
             }
-            // TODO Not update skeleton in each renderable.
+            //   Not update skeleton in each renderable.
             this._updateSkeleton(renderable, program, materialTakesTextureSlot);
             if (drawIDChanged) {
                 currentVAO = this._bindVAO(vaoExt, shader, geometry, program);
@@ -17134,7 +17134,7 @@ var Renderer = __WEBPACK_IMPORTED_MODULE_0__core_Base__["a" /* default */].exten
             prevRenderable = renderable;
         }
 
-        // TODO Seems need to be bound to null immediately if vao is changed?
+        //   Seems need to be bound to null immediately if vao is changed?
         if (vaoExt) {
             vaoExt.bindVertexArrayOES(null);
         }
@@ -17151,7 +17151,7 @@ var Renderer = __WEBPACK_IMPORTED_MODULE_0__core_Base__["a" /* default */].exten
         var skeleton = object.skeleton;
         // Set pose matrices of skinned mesh
         if (skeleton) {
-            // TODO Update before culling.
+            //   Update before culling.
             skeleton.update();
             if (object.joints.length > this._glinfo.getMaxJointNumber()) {
                 var skinMatricesTexture = skeleton.getSubSkinMatricesTexture(object.__uid__, object.joints);
@@ -17211,7 +17211,7 @@ var Renderer = __WEBPACK_IMPORTED_MODULE_0__core_Base__["a" /* default */].exten
             var uniformType = material.uniforms[symbol].type;
             // Not use `instanceof` to determine if a value is texture in Material#bind.
             // Use type instead, in some case texture may be in different namespaces.
-            // TODO Duck type validate.
+            //   Duck type validate.
             if (uniformType === 't' && uniformValue) {
                 // Reset slot
                 uniformValue.__slot = -1;
@@ -18638,7 +18638,7 @@ quat.invert = function(out, a) {
         dot = a0*a0 + a1*a1 + a2*a2 + a3*a3,
         invDot = dot ? 1.0/dot : 0;
 
-    // TODO: Would be faster to return [0,0,0,0] immediately if dot == 0
+    //  : Would be faster to return [0,0,0,0] immediately if dot == 0
 
     out[0] = -a0*invDot;
     out[1] = -a1*invDot;
@@ -18913,7 +18913,7 @@ Quaternion.prototype = {
         var m3 = __WEBPACK_IMPORTED_MODULE_1__glmatrix_mat3__["a" /* default */].create();
         return function (m) {
             __WEBPACK_IMPORTED_MODULE_1__glmatrix_mat3__["a" /* default */].fromMat4(m3, m.array);
-            // TODO Not like mat4, mat3 in glmatrix seems to be row-based
+            //   Not like mat4, mat3 in glmatrix seems to be row-based
             __WEBPACK_IMPORTED_MODULE_1__glmatrix_mat3__["a" /* default */].transpose(m3, m3);
             __WEBPACK_IMPORTED_MODULE_0__glmatrix_quat__["a" /* default */].fromMat3(this.array, m3);
             this._dirty = true;
@@ -20862,7 +20862,7 @@ Geo3DBuilder.prototype = {
                     sortTriangles: true,
                     dynamic: true
                 }),
-                // TODO Disable culling
+                //   Disable culling
                 culling: false,
                 ignorePicking: true,
                 // Render normal in normal pass
@@ -20916,7 +20916,7 @@ Geo3DBuilder.prototype = {
         var polygonTriangleCount = 0;
         var linesVertexCount = 0;
         var linesTriangleCount = 0;
-        // TODO Lines
+        //   Lines
         for (var idx = start; idx < end; idx++) {
             var polyInfo = this._getRegionPolygonInfo(idx);
             var lineInfo = this._getRegionLinesInfo(idx, componentModel, this._linesMesh.geometry);
@@ -21043,7 +21043,7 @@ Geo3DBuilder.prototype = {
     _updateDebugWireframe: function (componentModel) {
         var debugWireframeModel = componentModel.getModel('debug.wireframe');
 
-        // TODO Unshow
+        //   Unshow
         if (debugWireframeModel.get('show')) {
             var color = __WEBPACK_IMPORTED_MODULE_1__util_graphicGL__["a" /* default */].parseColor(
                 debugWireframeModel.get('lineStyle.color') || 'rgba(0,0,0,0.5)'
@@ -21052,7 +21052,7 @@ Geo3DBuilder.prototype = {
                 debugWireframeModel.get('lineStyle.width'), 1
             );
 
-            // TODO  Will cause highlight wrong
+            //    Will cause highlight wrong
             var mesh = this._polygonMesh;
             mesh.geometry.generateBarycentric();
             mesh.material.define('both', 'WIREFRAME_TRIANGLE');
@@ -21766,7 +21766,7 @@ LabelsBuilder.prototype.updateLabels = function (highlightDataIndices) {
             return;
         }
 
-        // TODO Background.
+        //   Background.
         var textEl = new __WEBPACK_IMPORTED_MODULE_0_echarts_lib_echarts___default.a.graphic.Text();
         __WEBPACK_IMPORTED_MODULE_0_echarts_lib_echarts___default.a.graphic.setTextStyle(textEl.style, textStyleModel, {
             text: text,
@@ -21834,7 +21834,7 @@ var Z_2D = -10;
 function isSymbolSizeSame(a, b) {
     return a && b && a[0] === b[0] && a[1] === b[1];
 }
-// TODO gl_PointSize has max value.
+//   gl_PointSize has max value.
 function PointsBuilder(is2D, api) {
     this.rootNode = new __WEBPACK_IMPORTED_MODULE_1__util_graphicGL__["a" /* default */].Node();
 
@@ -21909,7 +21909,7 @@ PointsBuilder.prototype = {
         var symbolInfo = this._getSymbolInfo(seriesModel, start, end);
         var dpr = api.getDevicePixelRatio();
 
-        // TODO image symbol
+        //   image symbol
         var itemStyle = seriesModel.getModel('itemStyle').getItemStyle();
         var largeMode = seriesModel.get('large');
 
@@ -22863,7 +22863,7 @@ vec2.normalize = function(out, a) {
         y = a[1];
     var len = x*x + y*y;
     if (len > 0) {
-        //TODO: evaluate use of glm_invsqrt here?
+        // : evaluate use of glm_invsqrt here?
         len = 1 / Math.sqrt(len);
         out[0] = a[0] * len;
         out[1] = a[1] * len;
@@ -23158,7 +23158,7 @@ var Renderable = __WEBPACK_IMPORTED_MODULE_0__Node__["a" /* default */].extend(/
      * @return {boolean}
      */
     isRenderable: function() {
-        // TODO Shader ?
+        //   Shader ?
         return this.geometry && this.material && this.material.shader && !this.invisible
             && this.geometry.vertexCount > 0;
     },
@@ -23679,7 +23679,7 @@ var cubemapUtil = {};
 
 var targets = ['px', 'nx', 'py', 'ny', 'pz', 'nz'];
 
-// TODO Downsample
+//   Downsample
 /**
  * @name clay.util.cubemap.prefilterEnvironmentMap
  * @param  {clay.Renderer} renderer
@@ -24489,7 +24489,7 @@ module.exports = _default;
  * @module echarts-gl/util/ZRTextureAtlasSurface
  */
 
-// TODO Expand.
+//   Expand.
 
 
 
@@ -24560,7 +24560,7 @@ ZRTextureAtlasSurfaceNode.prototype = {
     add: function (el, width, height) {
         // FIXME Text element not consider textAlign and textVerticalAlign.
 
-        // TODO, inner text, shadow
+        //  , inner text, shadow
         var rect = el.getBoundingRect();
 
         // FIXME aspect ratio
@@ -24632,7 +24632,7 @@ ZRTextureAtlasSurfaceNode.prototype = {
      * @param {number} spriteHeight
      */
     _fitElement: function (el, spriteWidth, spriteHeight) {
-        // TODO, inner text, shadow
+        //  , inner text, shadow
         var rect = el.getBoundingRect();
 
         var scaleX = spriteWidth / rect.width;
@@ -26352,7 +26352,7 @@ function isPowerOfTwo(width, height) {
             }
         },
 
-        // TODO
+        //
         // altitude: {
         //     min: 'auto',
         //     max: 'auto',
@@ -26427,7 +26427,7 @@ function quickSort(array, compare, left, right) {
 }
 
 
-// TODO Test.
+//   Test.
 function ProgressiveQuickSort() {
 
     // this._pivotList = new LinkedList();
@@ -26597,7 +26597,7 @@ function updateGeo3D(ecModel, api) {
         var altDims = seriesModel.coordDimToDataDim('alt');
         var altDim = altDims && altDims[0];
         if (altDim) {
-            // TODO altitiude is in coords of lines.
+            //   altitiude is in coords of lines.
             var dataExtent = data.getDataExtent(altDim, true);
             altitudeDataExtent[0] = Math.min(
                 altitudeDataExtent[0], dataExtent[0]
@@ -26935,7 +26935,7 @@ Geo3D.prototype = {
     },
 
     pointToData: function (point, out) {
-        // TODO
+        //
     }
 };
 
@@ -26968,7 +26968,7 @@ function MapServiceCoordSys3D() {
 
     this.altitudeScale = 1;
 
-    // TODO Change boxHeight won't have animation.
+    //   Change boxHeight won't have animation.
     this.boxHeight = 'auto';
 
     // Set by mapbox creator
@@ -27183,7 +27183,7 @@ MapServiceCoordSys3D.prototype = {
             var data = seriesModel.getData();
             var altDim = seriesModel.coordDimToDataDim('alt')[0];
             if (altDim) {
-                // TODO altitiude is in coords of lines.
+                //   altitiude is in coords of lines.
                 var dataExtent = data.getDataExtent(altDim, true);
                 altitudeDataExtent[0] = Math.min(
                     altitudeDataExtent[0], dataExtent[0]
@@ -27343,7 +27343,7 @@ GLViewHelper.prototype._setCameraTransform = function (m) {
 };
 
 GLViewHelper.prototype._updateCamera = function (width, height, dpr) {
-    // TODO, left, top, right, bottom
+    //  , left, top, right, bottom
     this.viewGL.setViewport(0, 0, width, height, dpr);
     var camera = this.viewGL.camera;
     camera.left = camera.top = 0;
@@ -27771,8 +27771,8 @@ var LinesGeometry = __WEBPACK_IMPORTED_MODULE_0_claygl_src_Geometry__["a" /* def
                             nextPoint[0] = points[k2];
                             nextPoint[1] = points[k2 + 1];
                         }
-                        // TODO In case dir is (0, 0)
-                        // TODO miterLimit
+                        //   In case dir is (0, 0)
+                        //   miterLimit
                         if (k > 0) {
                             vec2.sub(dirA, point, prevPoint);
                             vec2.sub(dirB, nextPoint, point);
@@ -28113,7 +28113,7 @@ EChartsGL.prototype.update = function (ecModel, api) {
                 return;
             }
             var viewGL = (coordSys && coordSys.viewGL) || chartView.viewGL;
-            // TODO Check zlevel not same with component of coordinate system ?
+            //   Check zlevel not same with component of coordinate system ?
             var layerGL = getLayerGL(seriesModel);
             layerGL.addView(viewGL);
 
@@ -28127,7 +28127,7 @@ EChartsGL.prototype.update = function (ecModel, api) {
 };
 
 // Hack original getRenderedCanvas. Will removed after new echarts released
-// TODO
+//
 var oldInit = __WEBPACK_IMPORTED_MODULE_0_echarts_lib_echarts___default.a.init;
 __WEBPACK_IMPORTED_MODULE_0_echarts_lib_echarts___default.a.init = function () {
     var chart = oldInit.apply(this, arguments);
@@ -28614,7 +28614,7 @@ function collectResources(scene, textureResourceList, geometryResourceList) {
             var geometry = renderable.geometry;
             var material = renderable.material;
 
-            // TODO optimize!!
+            //   optimize!!
             if (material !== prevMaterial) {
                 var textureUniforms = material.getTextureUniforms();
                 for (var u = 0; u < textureUniforms.length; u++) {
@@ -29330,7 +29330,7 @@ colorUtil.parse = function (colorStr, rgbaArr) {
     // #abc and #abc123 syntax.
     if (str.charAt(0) === '#') {
         if (str.length === 4) {
-            var iv = parseInt(str.substr(1), 16);  // TODO(deanm): Stricter parsing.
+            var iv = parseInt(str.substr(1), 16);  //  (deanm): Stricter parsing.
             if (!(iv >= 0 && iv <= 0xfff)) {
                 setRgba(rgbaArr, 0, 0, 0, 1);
                 return;  // Covers NaN.
@@ -29345,7 +29345,7 @@ colorUtil.parse = function (colorStr, rgbaArr) {
             return rgbaArr;
         }
         else if (str.length === 7) {
-            var iv = parseInt(str.substr(1), 16);  // TODO(deanm): Stricter parsing.
+            var iv = parseInt(str.substr(1), 16);  //  (deanm): Stricter parsing.
             if (!(iv >= 0 && iv <= 0xffffff)) {
                 setRgba(rgbaArr, 0, 0, 0, 1);
                 return;  // Covers NaN.
@@ -29993,7 +29993,7 @@ function unrollLoop(shaderStr, defines, lightsNumbers) {
                 end = lightNumberDefines[end];
             }
         }
-        // TODO Error checking
+        //   Error checking
 
         for (var idx = parseInt(start); idx < parseInt(end); idx++) {
             // PENDING Add scope?
@@ -30045,7 +30045,7 @@ function getDefineCode(defines, lightsNumbers, enabledTextures) {
 
 function getExtensionCode(exts) {
     // Extension declaration must before all non-preprocessor codes
-    // TODO vertex ? extension enum ?
+    //   vertex ? extension enum ?
     var extensionStr = [];
     for (var i = 0; i < exts.length; i++) {
         extensionStr.push('#extension GL_' + exts[i] + ' : enable');
@@ -30095,10 +30095,10 @@ ProgramManager.prototype.getProgram = function (renderable, material, scene) {
         if (renderable.joints.length > renderer.getMaxJointNumber()) {
             skinDefines.USE_SKIN_MATRICES_TEXTURE = null;
         }
-        // TODO Add skinning code?
+        //   Add skinning code?
         skinDefineCode = '\n' + getDefineCode(skinDefines) + '\n';
     }
-    // TODO Optimize key generation
+    //   Optimize key generation
     // VERTEX
     var vertexDefineStr = skinDefineCode + getDefineCode(material.vertexDefines, lightsNumbers, enabledTextures);
     // FRAGMENT
@@ -30689,7 +30689,7 @@ var RayPicking = __WEBPACK_IMPORTED_MODULE_0__core_Base__["a" /* default */].ext
                         __WEBPACK_IMPORTED_MODULE_3__math_Vector3__["a" /* default */].transformMat4(pointW, point, renderable.worldTransform);
                     }
                     else {
-                        // TODO point maybe not right.
+                        //   point maybe not right.
                         __WEBPACK_IMPORTED_MODULE_3__math_Vector3__["a" /* default */].copy(pointW, point);
                     }
                     out.push(new RayPicking.Intersection(
@@ -30988,7 +30988,7 @@ Attribute.prototype.clone = function(copyValue) {
     var ret = new Attribute(this.name, this.type, this.size, this.semantic);
     // FIXME
     if (copyValue) {
-        console.warn('todo');
+        console.warn(' ');
     }
     return ret;
 };
@@ -31306,7 +31306,7 @@ var GeometryBase = __WEBPACK_IMPORTED_MODULE_0__core_Base__["a" /* default */].e
                 }
                 if (cache.isDirty(makeAttrKey(name))) {
                     // Only update when they are dirty.
-                    // TODO: Use BufferSubData?
+                    //  : Use BufferSubData?
                     _gl.bindBuffer(_gl.ARRAY_BUFFER, buffer);
                     _gl.bufferData(_gl.ARRAY_BUFFER, attribute.value, this.dynamic ? __WEBPACK_IMPORTED_MODULE_1__core_glenum__["a" /* default */].DYNAMIC_DRAW : __WEBPACK_IMPORTED_MODULE_1__core_glenum__["a" /* default */].STATIC_DRAW);
                 }
@@ -31615,7 +31615,7 @@ var ret = {
                 return null;
         }
         var dataOffset = header[off_size] + 4;
-        // TODO: Suppose all face are existed
+        //  : Suppose all face are existed
         var faceNumber = isCubeMap ? 6 : 1;
         var mipmapCount = 1;
         if (hasMipmap) {
@@ -31646,7 +31646,7 @@ var ret = {
                 textures[f].mipmaps = mipmaps;
             }
         }
-        // TODO
+        //
         // return isCubeMap ? textures : textures[0];
         if (out) {
             out.width = textures[0].width;
@@ -31708,7 +31708,7 @@ function copyrgbe(s, t) {
     t[3] = s[3];
 }
 
-// TODO : check
+//   : check
 function oldReadColors(scan, buffer, offset, xmax) {
     var rshift = 0, x = 0, len = xmax;
     while (len > 0) {
@@ -32061,7 +32061,7 @@ var AmbientCubemapLight = __WEBPACK_IMPORTED_MODULE_0__Light__["a" /* default */
      */
     cubemap: null,
 
-    // TODO
+    //
     // range: 100,
 
     castShadow: false,
@@ -32283,7 +32283,7 @@ function projectEnvironmentMapGPU(renderer, envMap) {
     pass.render(renderer, framebuffer);
 
     framebuffer.bind(renderer);
-    // TODO Only chrome and firefox support Float32Array
+    //   Only chrome and firefox support Float32Array
     var pixels = new __WEBPACK_IMPORTED_MODULE_4__core_vendor__["a" /* default */].Float32Array(9 * 4);
     renderer.gl.readPixels(0, 0, 9, 1, __WEBPACK_IMPORTED_MODULE_0__Texture__["a" /* default */].RGBA, __WEBPACK_IMPORTED_MODULE_0__Texture__["a" /* default */].FLOAT, pixels);
 
@@ -32362,7 +32362,7 @@ function projectEnvironmentMapCPU(renderer, cubePixels, width, height) {
                 for (var x = 0; x < width; x++) {
 
                     normal[0] = x / (width - 1.0) * 2.0 - 1.0;
-                    // TODO Flip y?
+                    //   Flip y?
                     normal[1] = y / (height - 1.0) * 2.0 - 1.0;
                     normal[2] = -1.0;
                     __WEBPACK_IMPORTED_MODULE_9__glmatrix_vec3__["a" /* default */].normalize(normal, normal);
@@ -32404,7 +32404,7 @@ function projectEnvironmentMapCPU(renderer, cubePixels, width, height) {
  */
 sh.projectEnvironmentMap = function (renderer, envMap, opts) {
 
-    // TODO sRGB
+    //   sRGB
 
     opts = opts || {};
     opts.lod = opts.lod || 0;
@@ -35387,7 +35387,7 @@ var easingFuncs = __webpack_require__(144);
  * @config ondestroy(optional)
  * @config onrestart(optional)
  *
- * TODO pause
+ *   pause
  */
 function Clip(options) {
   this._target = options.target; // 生命周期
@@ -36139,7 +36139,7 @@ function parse(colorStr, rgbaArr) {
 
   if (str.charAt(0) === '#') {
     if (str.length === 4) {
-      var iv = parseInt(str.substr(1), 16); // TODO(deanm): Stricter parsing.
+      var iv = parseInt(str.substr(1), 16); //  (deanm): Stricter parsing.
 
       if (!(iv >= 0 && iv <= 0xfff)) {
         setRgba(rgbaArr, 0, 0, 0, 1);
@@ -36150,7 +36150,7 @@ function parse(colorStr, rgbaArr) {
       putToCache(colorStr, rgbaArr);
       return rgbaArr;
     } else if (str.length === 7) {
-      var iv = parseInt(str.substr(1), 16); // TODO(deanm): Stricter parsing.
+      var iv = parseInt(str.substr(1), 16); //  (deanm): Stricter parsing.
 
       if (!(iv >= 0 && iv <= 0xffffff)) {
         setRgba(rgbaArr, 0, 0, 0, 1);
@@ -36780,7 +36780,7 @@ var AXIS_TYPES = ['value', 'category', 'time', 'log'];
         });
     });
 
-    // TODO
+    //
     BaseAxisModelClass.superClass.registerSubTypeDefaulter(
         dim + 'Axis3D',
         __WEBPACK_IMPORTED_MODULE_0_echarts_lib_echarts___default.a.util.curry(axisTypeDefaulter, dim)
@@ -37091,7 +37091,7 @@ var Grid3DModel = __WEBPACK_IMPORTED_MODULE_0_echarts_lib_echarts___default.a.ex
                 // (dimValue: number, value: Array) => string
                 formatter: null,
 
-                // TODO, Consider boxWidth
+                //  , Consider boxWidth
                 margin: 8,
                 // backgroundColor: '#ffbd67',
                 // borderColor: '#000',
@@ -37212,7 +37212,7 @@ __WEBPACK_IMPORTED_MODULE_0_echarts_lib_echarts___default.a.util.merge(Grid3DMod
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Grid3DAxis__ = __webpack_require__(164);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__util_mesh_LabelsMesh__ = __webpack_require__(63);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__util_shader_lines3D_glsl_js__ = __webpack_require__(46);
-// TODO orthographic camera
+//   orthographic camera
 
 
 
@@ -37387,7 +37387,7 @@ var dimIndicesMap = {
 
     afterRender: function (grid3DModel, ecModel, api, layerGL) {
         // Create ambient cubemap after render because we need to know the renderer.
-        // TODO
+        //
         var renderer = layerGL.renderer;
 
         this._sceneHelper.updateAmbientCubemap(renderer, grid3DModel, api);
@@ -37414,7 +37414,7 @@ var dimIndicesMap = {
         var cartesian = grid3DModel.coordinateSystem;
         var viewGL = cartesian.viewGL;
 
-        // TODO xAxis3D.axisPointer.show ?
+        //   xAxis3D.axisPointer.show ?
         if (grid3DModel.get('show') && grid3DModel.get('axisPointer.show')) {
             viewGL.on('mousemove', this._updateAxisPointerOnMousePosition, this);
         }
@@ -37527,7 +37527,7 @@ var dimIndicesMap = {
     _updateAxisLinePosition: function () {
         // Put xAxis, yAxis on x, y visible plane.
         // Put zAxis on the left.
-        // TODO
+        //
         var cartesian = this._model.coordinateSystem;
         var xAxis = cartesian.getAxis('x');
         var yAxis = cartesian.getAxis('y');
@@ -38369,7 +38369,7 @@ Grid3DAxis.prototype.update = function (
         var labelColor = firstNotNull(nameTextStyleModel.get('color'), axisLineColor);
         var strokeColor = nameTextStyleModel.get('borderColor');
         var lineWidth = nameTextStyleModel.get('borderWidth');
-        // TODO start and end
+        //   start and end
         p[idx] = p[idx] = (extent[0] + extent[1]) / 2;
         p[otherIdx] = axisModel.get('nameGap');
 
@@ -38993,7 +38993,7 @@ Axis3D.prototype = {
     },
 
     calculateCategoryInterval: function () {
-        // TODO consider label length
+        //   consider label length
         return Math.floor(this.scale.count() / 8);
     }
 };
@@ -40285,8 +40285,8 @@ var ShadowMapPass = __WEBPACK_IMPORTED_MODULE_0__core_Base__["a" /* default */].
         _gl.disable(_gl.BLEND);
 
         // Clear with high-z, so the part not rendered will not been shadowed
-        // TODO
-        // TODO restore
+        //
+        //   restore
         _gl.clearColor(1.0, 1.0, 1.0, 1.0);
 
         // Shadow uniforms
@@ -40444,7 +40444,7 @@ var ShadowMapPass = __WEBPACK_IMPORTED_MODULE_0__core_Base__["a" /* default */].
                     .copy(boundingBox).applyTransform(sceneCamera.viewMatrix);
             }
             // Considering moving speed since the bounding box is from last frame
-            // TODO: add a bias
+            //  : add a bias
             var clippedFar = Math.min(-scene.viewBoundingBoxLastFrame.min.z, sceneCamera.far);
             var clippedNear = Math.max(-scene.viewBoundingBoxLastFrame.max.z, sceneCamera.near);
 
@@ -40737,7 +40737,7 @@ var ShadowMapPass = __WEBPACK_IMPORTED_MODULE_0__core_Base__["a" /* default */].
                 texture = new __WEBPACK_IMPORTED_MODULE_11__Texture2D__["a" /* default */]();
             }
             // At most 4 cascade
-            // TODO share with height ?
+            //   share with height ?
             texture.width = resolution * cascade;
             texture.height = resolution;
             if (this.softShadow === ShadowMapPass.VSM) {
@@ -41530,7 +41530,7 @@ function createCompositor(json, opts) {
         var paramInfo = json.parameters[name];
         lib.parameters[name] = convertParameter(paramInfo);
     }
-    // TODO load texture asynchronous
+    //   load texture asynchronous
     loadTextures(json, lib, opts, function(textureLib) {
         lib.textures = textureLib;
         afterLoad();
@@ -42189,11 +42189,11 @@ var TextureNode = __WEBPACK_IMPORTED_MODULE_0__CompositorNode__["a" /* default *
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Pass__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__CompositorNode__ = __webpack_require__(48);
-// TODO Shader library
+//   Shader library
 
 
 
-// TODO curlnoise demo wrong
+//   curlnoise demo wrong
 
 // PENDING
 // Use topological sort ?
@@ -42372,7 +42372,7 @@ var FilterNode = __WEBPACK_IMPORTED_MODULE_1__CompositorNode__["a" /* default */
         this.trigger('afterrender', renderer);
     },
 
-    // TODO Remove parameter function callback
+    //   Remove parameter function callback
     updateParameter: function (outputName, renderer) {
         var outputInfo = this.outputs[outputName];
         var parameters = outputInfo.parameters;
@@ -42530,7 +42530,7 @@ var FilterNode = __WEBPACK_IMPORTED_MODULE_1__CompositorNode__["a" /* default */
 
 // import fxaa3Essl from './source/compositor/fxaa3.glsl.js';
 
-// TODO Must export a module and be used in the other modules. Or it will be tree shaked
+//   Must export a module and be used in the other modules. Or it will be tree shaked
 function register(Shader) {
     // Some build in shaders
     Shader['import'](__WEBPACK_IMPORTED_MODULE_0__source_compositor_coloradjust_glsl_js__["a" /* default */]);
@@ -43135,7 +43135,7 @@ SSRPass.prototype.dispose = function (renderer) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__util_shader_normal_glsl_js__ = __webpack_require__(195);
 // NormalPass will generate normal and depth data.
 
-// TODO Animation
+//   Animation
 
 
 
@@ -43162,7 +43162,7 @@ function attachTextureToSlot(renderer, program, symbol, texture, slot) {
     }
 }
 
-// TODO Use globalShader insteadof globalMaterial?
+//   Use globalShader insteadof globalMaterial?
 function getBeforeRenderHook (renderer, defaultNormalMap, defaultBumpMap, defaultRoughnessMap, normalMaterial) {
 
     var previousNormalMap;
@@ -44061,7 +44061,7 @@ function TemporalSuperSampling (frames) {
 
     this._outputPass = new __WEBPACK_IMPORTED_MODULE_1_claygl_src_compositor_Pass__["a" /* default */]({
         fragment: __WEBPACK_IMPORTED_MODULE_4_claygl_src_Shader__["a" /* default */].source('clay.compositor.output'),
-        // TODO, alpha is premultiplied?
+        //  , alpha is premultiplied?
         blendWithPrevious: true
     });
     this._outputPass.material.define('fragment', 'OUTPUT_ALPHA');
@@ -45232,7 +45232,7 @@ var GlobeModel = __WEBPACK_IMPORTED_MODULE_0_echarts_lib_echarts___default.a.ext
     },
 
     mergeOption: function (option) {
-        // TODO test
+        //   test
         var oldLayers = this.option.layers;
         this.option.layers = null;
         GlobeModel.superApply(this, 'mergeOption', arguments);
@@ -45555,7 +45555,7 @@ __WEBPACK_IMPORTED_MODULE_0_echarts_lib_echarts___default.a.util.merge(GlobeMode
 
     afterRender: function (globeModel, ecModel, api, layerGL) {
         // Create ambient cubemap after render because we need to know the renderer.
-        // TODO
+        //
         var renderer = layerGL.renderer;
 
         this._sceneHelper.updateAmbientCubemap(renderer, globeModel, api);
@@ -45998,7 +45998,7 @@ function updateGlobe(ecModel, api) {
         var altDims = seriesModel.coordDimToDataDim('alt');
         var altDim = altDims && altDims[0];
         if (altDim) {
-            // TODO altitiude is in coords of lines.
+            //   altitiude is in coords of lines.
             var dataExtent = data.getDataExtent(altDim, true);
             altitudeDataExtent[0] = Math.min(
                 altitudeDataExtent[0], dataExtent[0]
@@ -46157,7 +46157,7 @@ Globe.prototype = {
         var i = (lng + 180) / 360 * (this.displacementWidth - 1);
         var j = (90 - lat) / 180 * (this.displacementHeight - 1);
         // NEAREST SAMPLING
-        // TODO Better bilinear sampling
+        //   Better bilinear sampling
         var idx = Math.round(i) + Math.round(j) * this.displacementWidth;
         return this.displacementData[idx];
     },
@@ -47124,7 +47124,7 @@ function globeLayout(seriesModel, coordSys) {
     data.each(dims, function (lng, lat, val, idx) {
         var stackedValue = data.get(valueDim.dimension, idx);
         var baseValue = valueDim.isStacked ? (stackedValue - val) : coordSys.altitudeAxis.scale.getExtent()[0];
-        // TODO Stacked with minHeight.
+        //   Stacked with minHeight.
         var height = Math.max(coordSys.altitudeAxis.dataToCoord(val), barMinHeight);
         var start = coordSys.dataToPoint([lng, lat, baseValue]);
         var end = coordSys.dataToPoint([lng, lat, stackedValue]);
@@ -47329,8 +47329,8 @@ function cartesian3DLayout(seriesModel, coordSys) {
         : dims[2];
 
     data.each(dims, function (x, y, z, idx) {
-        // TODO zAxis is inversed
-        // TODO On different plane.
+        //   zAxis is inversed
+        //   On different plane.
         var stackedValue = data.get(valueDim, idx);
 
         var baseValue = isStacked ? (stackedValue - z)
@@ -47342,7 +47342,7 @@ function cartesian3DLayout(seriesModel, coordSys) {
         // PENDING When zAxis is not cross zero.
         var dir = [0, end[1] < start[1] ? -1 : 1, 0];
         if (Math.abs(height) === 0) {
-            // TODO
+            //
             height = 0.1;
         }
         var size = [barSize[0], height, barSize[1]];
@@ -47363,7 +47363,7 @@ function cartesian3DLayout(seriesModel, coordSys) {
     var xExtent = data.getDataExtent(dimX);
     var yExtent = data.getDataExtent(dimY);
 
-    // TODO Handle one data situation
+    //   Handle one data situation
     var xSpan = (xExtent[1] - xExtent[0]) || xExtent[0];
     var ySpan = (yExtent[1] - yExtent[0]) || yExtent[0];
     var dimSize = 50;
@@ -48401,7 +48401,7 @@ __WEBPACK_IMPORTED_MODULE_1__util_graphicGL__["a" /* default */].Shader.import(_
         var coordSys = seriesModel.coordinateSystem;
         if (coordSys && coordSys.viewGL) {
             coordSys.viewGL.add(this.groupGL);
-            // TODO
+            //
             var methodName = coordSys.viewGL.isLinearSpace() ? 'define' : 'undefine';
             this._line3DMesh.material[methodName]('fragment', 'SRGB_DECODE');
         }
@@ -48915,7 +48915,7 @@ __WEBPACK_IMPORTED_MODULE_0_echarts_lib_echarts___default.a.extendChartView({
     },
 
     incrementalRender: function (params, seriesModel, ecModel, api) {
-        // TODO Sort transparency.
+        //   Sort transparency.
         if (params.end <= params.start) {
             return;
         }
@@ -49116,7 +49116,7 @@ var spriteUtil = {
         return margin;
     },
 
-    // TODO Not consider shadowOffsetX, shadowOffsetY.
+    //   Not consider shadowOffsetX, shadowOffsetY.
     /**
      * @param {string} symbol
      * @param {number | Array.<number>} symbolSize
@@ -49136,7 +49136,7 @@ var spriteUtil = {
     },
 
     createSDFFromCanvas: function (canvas, size, range, outCanvas) {
-        // TODO Create a low resolution SDF from high resolution image.
+        //   Create a low resolution SDF from high resolution image.
         return makeSprite(size, outCanvas, function (outCtx) {
             var ctx = canvas.getContext('2d');
             var imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
@@ -49493,7 +49493,7 @@ function getCubicPointsOnGlobe(coords, coordSys) {
     coordSys.dataToPoint(coord1, p3);
     // Get p1
     normalize(normal, p0);
-    // TODO p0-p3 is parallel with normal
+    //   p0-p3 is parallel with normal
     sub(tangent, p3, p0);
     normalize(tangent, tangent);
     cross(bitangent, tangent, normal);
@@ -50128,10 +50128,10 @@ var Polygons3DSeries = __WEBPACK_IMPORTED_MODULE_0_echarts_lib_echarts___default
         if (!itemModel.get('multiPolygon')) {
             coords = [coords];
         }
-        // TODO Validate
+        //   Validate
         var out = [];
         for (var i = 0; i < coords.length; i++) {
-            // TODO Convert here ?
+            //   Convert here ?
             var interiors = [];
             for (var k = 1; k < coords[i].length; k++) {
                 interiors.push(transformPolygon(coordSys, coords[i][k]));
@@ -50767,7 +50767,7 @@ __WEBPACK_IMPORTED_MODULE_0_echarts_lib_echarts___default.a.extendChartView({
         var needsNormal = shading !== 'color';
 
         if (needsSplitQuad) {
-            // TODO, If needs remove the invalid points, or set color transparent.
+            //  , If needs remove the invalid points, or set color transparent.
             var vertexCount = (row - 1) * (column - 1) * 4;
             positionAttr.init(vertexCount);
             if (showWireframe) {
@@ -52474,7 +52474,7 @@ graphProto.breadthFirstTraverse = function (cb, startNode, direction, context) {
       }
     }
   }
-}; // TODO
+}; //
 // graphProto.depthFirstTraverse = function (
 //     cb, startNode, direction, context
 // ) {
@@ -54707,7 +54707,7 @@ function forceAtlas2Worker() {
             var y = a[1];
             var len = x*x + y*y;
             if (len > 0) {
-                //TODO: evaluate use of glm_invsqrt here?
+                // : evaluate use of glm_invsqrt here?
                 len = 1 / Math.sqrt(len);
                 out[0] = a[0] * len;
                 out[1] = a[1] * len;
@@ -54937,7 +54937,7 @@ function forceAtlas2Worker() {
         this.edgeWeightInfluence = 1.0;
         this.jitterTolerence = 0.1;
 
-        // TODO
+        //
         this.preventOverlap = false;
         this.dissuadeHubs = false;
 
@@ -55572,7 +55572,7 @@ var Roam2DControl = __WEBPACK_IMPORTED_MODULE_0_claygl_src_core_Base__["a" /* de
 
 
 
-// TODO 百度地图不是 linear 的
+//   百度地图不是 linear 的
 __WEBPACK_IMPORTED_MODULE_0_echarts_lib_echarts___default.a.extendChartView({
 
     type: 'flowGL',
@@ -55676,7 +55676,7 @@ __WEBPACK_IMPORTED_MODULE_0_echarts_lib_echarts___default.a.extendChartView({
         var gridHeight = seriesModel.get('gridHeight');
 
         if (gridWidth == null || gridWidth === 'auto') {
-            // TODO not accurate.
+            //   not accurate.
             var aspect = (xExtent[1] - xExtent[0]) / (yExtent[1] - yExtent[0]);
             gridWidth = Math.round(Math.sqrt(aspect * data.count()));
         }
@@ -55800,7 +55800,7 @@ __WEBPACK_IMPORTED_MODULE_0_echarts_lib_echarts___default.a.extendChartView({
             this._particleSurface.setGradientTexture(null);
             return;
         }
-        // TODO Different dimensions
+        //   Different dimensions
         this._gradientTexture = this._gradientTexture || new __WEBPACK_IMPORTED_MODULE_1__util_graphicGL__["a" /* default */].Texture2D({
             image: document.createElement('canvas')
         });

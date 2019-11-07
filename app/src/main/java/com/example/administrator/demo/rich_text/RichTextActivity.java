@@ -18,7 +18,7 @@ import butterknife.ButterKnife;
 /**
  * @author TangLongHui
  * @data created on 2019/10/24
- * @describe TODO: 富文本练习 demo
+ * @describe  : 富文本练习 demo
  */
 public class RichTextActivity extends AppCompatActivity {
 

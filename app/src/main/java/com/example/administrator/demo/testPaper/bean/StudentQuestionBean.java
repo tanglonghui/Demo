@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * @author TangLongHui
  * @data created on 2019/6/24.
- * @describe TODO
+ * @describe
  */
 public class StudentQuestionBean implements Serializable {
 
