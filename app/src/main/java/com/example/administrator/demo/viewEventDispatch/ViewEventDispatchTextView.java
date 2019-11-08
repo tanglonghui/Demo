@@ -11,7 +11,7 @@ import android.view.MotionEvent;
  * @describe   学习事件分发
  */
 public class ViewEventDispatchTextView extends android.support.v7.widget.AppCompatTextView {
-    private String TAG = "VEDispatchTextView";
+    private String TAG = "View    ";
 
     public ViewEventDispatchTextView(Context context) {
         super(context);
@@ -29,7 +29,7 @@ public class ViewEventDispatchTextView extends android.support.v7.widget.AppComp
     public boolean dispatchTouchEvent(MotionEvent ev) {
         switch (ev.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                Log.e(this.getClass().getSimpleName(), " dispatchTouchEvent--" );
+                Log.e(TAG, " dispatchTouchEvent--" );
                 break;
             case MotionEvent.ACTION_MOVE:
 
@@ -38,7 +38,7 @@ public class ViewEventDispatchTextView extends android.support.v7.widget.AppComp
 
                 break;
             case MotionEvent.ACTION_CANCEL:
-
+                Log.e(TAG, " ACTION_CANCEL--");
                 break;
         }
         return super.dispatchTouchEvent(ev);
@@ -48,7 +48,7 @@ public class ViewEventDispatchTextView extends android.support.v7.widget.AppComp
     public boolean onTouchEvent(MotionEvent ev) {
         switch (ev.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                Log.e(this.getClass().getSimpleName(), " onTouchEvent--" );
+                Log.e(TAG, " onTouchEvent--" );
                 break;
             case MotionEvent.ACTION_MOVE:
 

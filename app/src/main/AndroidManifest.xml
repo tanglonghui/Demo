@@ -63,7 +63,8 @@
         <activity android:name="com.example.administrator.kotlin.HelloKotlinActivity" />
         <activity android:name="com.example.administrator.kotlin.test.KotlinTestActivity" />
         <activity android:name=".rich_text.RichTextActivity" />
-        <activity android:name=".video.AndroidVideoActivity"></activity>
+        <activity android:name=".video.AndroidVideoActivity" />
+        <activity android:name=".string.StringTestActivity"></activity>
     </application>
 
 </manifest>

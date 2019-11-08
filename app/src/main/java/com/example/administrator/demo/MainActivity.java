@@ -27,6 +27,7 @@ import com.example.administrator.demo.res.ShapeActivity;
 import com.example.administrator.demo.retrofit.RetrofitActivity;
 import com.example.administrator.demo.rich_text.RichTextActivity;
 import com.example.administrator.demo.rxjava.RxJavaActivity;
+import com.example.administrator.demo.string.StringTestActivity;
 import com.example.administrator.demo.test.testPaper.TestPaperActivity;
 import com.example.administrator.demo.testPaper.MyTestPaperActivity;
 import com.example.administrator.demo.thread.ThreadActivity;
@@ -105,6 +106,7 @@ public class MainActivity extends AppCompatActivity {
         mList.add(new EasyModel("kotlin hello", HelloKotlinActivity.class));
         mList.add(new EasyModel("富文本，图文混排", RichTextActivity.class));
         mList.add(new EasyModel("视频播放合集", AndroidVideoActivity.class));
+        mList.add(new EasyModel("StringTest", StringTestActivity.class));
     }
 
     @OnClick(R.id.tv_Test)
