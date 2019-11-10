@@ -68,17 +68,17 @@ public class ViewEventDispatchLinearLayout extends LinearLayoutCompat {
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
-        boolean result = super.onInterceptTouchEvent(ev);
-        Log.e(TAG, " onInterceptTouchEvent--" + result);
-        switch (ev.getAction()) {
-            case MotionEvent.ACTION_UP:
-                return true;
-            case MotionEvent.ACTION_DOWN:
-                return true;
-//            case MotionEvent.ACTION_CANCEL:
+//        boolean result = super.onInterceptTouchEvent(ev);
+        Log.e(TAG, " onInterceptTouchEvent--");
+//        switch (ev.getAction()) {
+//            case MotionEvent.ACTION_UP:
 //                return true;
-        }
-        return result;
+//            case MotionEvent.ACTION_DOWN:
+//                return true;
+////            case MotionEvent.ACTION_CANCEL:
+////                return true;
+//        }
+        return super.onInterceptTouchEvent(ev);
     }
 
     private void Log(String s) {
