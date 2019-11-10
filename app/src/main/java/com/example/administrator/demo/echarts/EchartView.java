@@ -10,7 +10,7 @@ import com.github.abel533.echarts.json.GsonOption;
 /**
  * @author TangLongHui
  * @data created on 2019/8/8.
- * @describe TODO
+ * @describe
  */
 public class EchartView extends WebView {
     private static final String TAG = EchartView.class.getSimpleName();

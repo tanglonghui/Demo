@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="true"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_15_dip">
+
+            <TextView
+                android:id="@+id/tv_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="从实践标准的绝对性和相对性的关系，谈谈你对“实践没有止境，理论创新也没有止境”的认识。"
+                android:textColor="#333333"
+                android:textSize="@dimen/app_16_sp" />
+
+
+            <EditText
+                android:id="@+id/et_answer"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_300_dip"
+                android:layout_margin="@dimen/dimen_10_dip"
+                android:background="@drawable/shape_my"
+                android:gravity="left"
+                android:hint="请输入答案（最多可输入300字）"
+                android:maxLength="300"
+                android:padding="@dimen/dimen_15_dip"
+                android:textColor="#000"
+                android:textSize="@dimen/app_15_sp" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -114,7 +114,7 @@ function detect(ua) {
   || ua.match(/Trident\/.+?rv:(([\d.]+))/);
   var edge = ua.match(/Edge\/([\d.]+)/); // IE 12 and 12+
 
-  var weChat = /micromessenger/i.test(ua); // Todo: clean this up with a better OS/browser seperation:
+  var weChat = /micromessenger/i.test(ua); //  : clean this up with a better OS/browser seperation:
   // - discern (more) between multiple browsers on android
   // - decide if kindle fire in silk mode is android or not
   // - Firefox on Android doesn't specify the Android version
@@ -1194,7 +1194,7 @@ var vector = (Object.freeze || Object)({
 	max: max
 });
 
-// TODO Draggable for group
+//   Draggable for group
 // FIXME Draggable on element which has parent rotation or scale
 function Draggable() {
   this.on('mousedown', this._dragStart, this);
@@ -2492,7 +2492,7 @@ var originTransform = create$1();
 
 transformableProto.setLocalTransform = function (m) {
   if (!m) {
-    // TODO return or set identity?
+    //   return or set identity?
     return;
   }
 
@@ -3052,7 +3052,7 @@ var easing = {
  * @config ondestroy(optional)
  * @config onrestart(optional)
  *
- * TODO pause
+ *   pause
  */
 function Clip(options) {
   this._target = options.target; // 生命周期
@@ -3613,7 +3613,7 @@ function parse(colorStr, rgbaArr) {
 
   if (str.charAt(0) === '#') {
     if (str.length === 4) {
-      var iv = parseInt(str.substr(1), 16); // TODO(deanm): Stricter parsing.
+      var iv = parseInt(str.substr(1), 16); //  (deanm): Stricter parsing.
 
       if (!(iv >= 0 && iv <= 0xfff)) {
         setRgba(rgbaArr, 0, 0, 0, 1);
@@ -3624,7 +3624,7 @@ function parse(colorStr, rgbaArr) {
       putToCache(colorStr, rgbaArr);
       return rgbaArr;
     } else if (str.length === 7) {
-      var iv = parseInt(str.substr(1), 16); // TODO(deanm): Stricter parsing.
+      var iv = parseInt(str.substr(1), 16); //  (deanm): Stricter parsing.
 
       if (!(iv >= 0 && iv <= 0xffffff)) {
         setRgba(rgbaArr, 0, 0, 0, 1);
@@ -4757,7 +4757,7 @@ Animatable.prototype = {
    *      position: [10, 10]
    *  }, 100, 100, 'cubicOut', function () { // done })
    */
-  // TODO Return animation key
+  //   Return animation key
   animateTo: function (target, time, delay, easing, callback, forceAnimate) {
     animateTo(this, target, time, delay, easing, callback, forceAnimate);
   },
@@ -5600,7 +5600,7 @@ Group.prototype = {
    * @return {module:zrender/core/BoundingRect}
    */
   getBoundingRect: function (includeChildren) {
-    // TODO Caching
+    //   Caching
     var rect = null;
     var tmpRect = new BoundingRect(0, 0, 0, 0);
     var children = includeChildren || this._children;
@@ -5614,7 +5614,7 @@ Group.prototype = {
       }
 
       var childRect = child.getBoundingRect();
-      var transform = child.getLocalTransform(tmpMat); // TODO
+      var transform = child.getLocalTransform(tmpMat); //
       // The boundingRect cacluated by transforming original
       // rect may be bigger than the actual bundingRect when rotation
       // is used. (Consider a circle rotated aginst its center, where
@@ -8065,7 +8065,7 @@ function buildPath(ctx, shape) {
   r1 !== 0 && ctx.arc(x + r1, y + r1, r1, Math.PI, Math.PI * 1.5);
 }
 
-var DEFAULT_FONT = DEFAULT_FONT$1; // TODO: Have not support 'start', 'end' yet.
+var DEFAULT_FONT = DEFAULT_FONT$1; //  : Have not support 'start', 'end' yet.
 
 var VALID_TEXT_ALIGN = {
   left: 1,
@@ -8546,11 +8546,11 @@ function setCtx(ctx, prop, value) {
 
 
 function getStroke(stroke, lineWidth) {
-  return stroke == null || lineWidth <= 0 || stroke === 'transparent' || stroke === 'none' ? null // TODO pattern and gradient?
+  return stroke == null || lineWidth <= 0 || stroke === 'transparent' || stroke === 'none' ? null //   pattern and gradient?
   : stroke.image || stroke.colorStops ? '#000' : stroke;
 }
 function getFill(fill) {
-  return fill == null || fill === 'none' ? null // TODO pattern and gradient?
+  return fill == null || fill === 'none' ? null //   pattern and gradient?
   : fill.image || fill.colorStops ? '#000' : fill;
 }
 
@@ -8834,7 +8834,7 @@ Displayable.prototype = {
    * If displayable object binded any event
    * @return {boolean}
    */
-  // TODO, 通过 bind 绑定的事件
+  //  , 通过 bind 绑定的事件
   // isSilent: function () {
   //     return !(
   //         this.hoverable || this.draggable
@@ -9630,7 +9630,7 @@ Painter.prototype = {
       var el = list[i];
       var zlevel = el.zlevel;
       var layer; // PENDING If change one incremental element style ?
-      // TODO Where there are non-incremental elements between incremental elements.
+      //   Where there are non-incremental elements between incremental elements.
 
       if (el.incremental) {
         layer = this.getLayer(zlevel + INCREMENTAL_INC, this._needsManuallyCompositing);
@@ -9961,7 +9961,7 @@ Painter.prototype = {
  * @module zrender/animation/Animation
  * @author pissang(https://github.com/pissang)
  */
-// TODO Additive animation
+//   Additive animation
 // http://iosoteric.com/additive-animations-animatewithduration-in-ios-8/
 // https://developer.apple.com/videos/wwdc2014/#236
 /**
@@ -10181,7 +10181,7 @@ Animation.prototype = {
    * @param  {Function} [options.setter=null] Set value to target.
    * @return {module:zrender/animation/Animation~Animator}
    */
-  // TODO Gap
+  //   Gap
   animate: function (target, options) {
     options = options || {};
     var animator = new Animator(target, options.loop, options.getter, options.setter);
@@ -10591,7 +10591,7 @@ var ZRender = function (id, dom, opts) {
   this.id = id;
   var self = this;
   var storage = new Storage();
-  var rendererType = opts.renderer; // TODO WebGL
+  var rendererType = opts.renderer; //   WebGL
 
   if (useVML) {
     if (!painterCtors.vml) {
@@ -11668,8 +11668,8 @@ function enableClassManagement(entity, options) {
 * specific language governing permissions and limitations
 * under the License.
 */
-// TODO Parse shadow style
-// TODO Only shallow path support
+//   Parse shadow style
+//   Only shallow path support
 var makeStyleMapper = function (properties) {
   // Normalize
   for (var i = 0; i < properties.length; i++) {
@@ -12481,7 +12481,7 @@ function fromArc(x, y, rx, ry, startAngle, endAngle, anticlockwise, min$$1, max$
  * @module zrender/core/PathProxy
  * @author Yi Shen (http://www.github.com/pissang)
  */
-// TODO getTotalLength, getPointAtLength
+//   getTotalLength, getPointAtLength
 var CMD = {
   M: 1,
   L: 2,
@@ -12680,7 +12680,7 @@ PathProxy.prototype = {
     this._yi = mathSin$1(endAngle) * r + cy;
     return this;
   },
-  // TODO
+  //
   arcTo: function (x1, y1, x2, y2, radius) {
     if (this._ctx) {
       this._ctx.arcTo(x1, y1, x2, y2, radius);
@@ -12688,7 +12688,7 @@ PathProxy.prototype = {
 
     return this;
   },
-  // TODO
+  //
   rect: function (x, y, w, h) {
     this._ctx && this._ctx.rect(x, y, w, h);
     this.addData(CMD.R, x, y, w, h);
@@ -13060,13 +13060,13 @@ PathProxy.prototype = {
           break;
 
         case CMD.A:
-          // TODO Arc 判断的开销比较大
+          //   Arc 判断的开销比较大
           var cx = data[i++];
           var cy = data[i++];
           var rx = data[i++];
           var ry = data[i++];
           var startAngle = data[i++];
-          var endAngle = data[i++] + startAngle; // TODO Arc 旋转
+          var endAngle = data[i++] + startAngle; //   Arc 旋转
 
           i += 1;
           var anticlockwise = 1 - data[i++];
@@ -13541,7 +13541,7 @@ function windingQuadratic(x0, y0, x1, y1, x2, y2, x, y) {
       return y2 < y0 ? unit : -unit;
     }
   }
-} // TODO
+} //
 // Arc 旋转
 
 
@@ -13696,13 +13696,13 @@ function containPath(data, lineWidth, isStroke, x, y) {
         break;
 
       case CMD$1.A:
-        // TODO Arc 判断的开销比较大
+        //   Arc 判断的开销比较大
         var cx = data[i++];
         var cy = data[i++];
         var rx = data[i++];
         var ry = data[i++];
         var theta = data[i++];
-        var dTheta = data[i++]; // TODO Arc 旋转
+        var dTheta = data[i++]; //   Arc 旋转
 
         i += 1;
         var anticlockwise = 1 - data[i++];
@@ -14581,7 +14581,7 @@ function createPathProxyFromString(data) {
 
   path.toStatic();
   return path;
-} // TODO Optimize double memory cost problem
+} //   Optimize double memory cost problem
 
 
 function createPathOptions(str, opts) {
@@ -14632,9 +14632,9 @@ function extendFromString(str, opts) {
 /**
  * Merge multiple paths
  */
-// TODO Apply transform
-// TODO stroke dash
-// TODO Optimize double memory cost problem
+//   Apply transform
+//   stroke dash
+//   Optimize double memory cost problem
 
 function mergePath$1(pathEls, opts) {
   var pathList = [];
@@ -18932,7 +18932,7 @@ var globalDefault = {
 var inner$2 = makeInner();
 
 function getNearestColorPalette(colors, requestColorNum) {
-  var paletteNum = colors.length; // TODO colors must be in order
+  var paletteNum = colors.length; //   colors must be in order
 
   for (var i = 0; i < paletteNum; i++) {
     if (colors[i].length > requestColorNum) {
@@ -19010,7 +19010,7 @@ var colorPaletteMixin = {
  * Helper for model references.
  * There are many manners to refer axis/coordSys.
  */
-// TODO
+//
 // merge relevant logic to this file?
 // check: "modelHelper" of tooltip and "BrushTargetManager".
 /**
@@ -19509,7 +19509,7 @@ function completeBySourceData(data, sourceFormat, seriesLayoutBy, sourceHeader, 
     startIndex: startIndex,
     dimensionsDefine: normalizeDimensionsDefine(dimensionsDefine),
     dimensionsDetectCount: dimensionsDetectCount,
-    potentialNameDimIndex: potentialNameDimIndex // TODO: potentialIdDimIdx
+    potentialNameDimIndex: potentialNameDimIndex //  : potentialIdDimIdx
 
   };
 } // Consider dimensions defined like ['A', 'price', 'B', 'price', 'C', 'price'],
@@ -19590,7 +19590,7 @@ function objectRowsCollectDimensions(data) {
     });
     return dimensions;
   }
-} // ??? TODO merge to completedimensions, where also has
+} // ???   merge to completedimensions, where also has
 // default encode making logic. And the default rule
 // should depends on series? consider 'map'.
 
@@ -19602,7 +19602,7 @@ function makeDefaultEncode(seriesModel, datasetModel, data, sourceFormat, series
 
   var encodeItemName = [];
   var encodeSeriesName = [];
-  var seriesType = seriesModel.subType; // ??? TODO refactor: provide by series itself.
+  var seriesType = seriesModel.subType; // ???   refactor: provide by series itself.
   // Consider the case: 'map' series is based on geo coordSys,
   // 'graph', 'heatmap' can be based on cartesian. But can not
   // give default rule simply here.
@@ -19619,14 +19619,14 @@ function makeDefaultEncode(seriesModel, datasetModel, data, sourceFormat, series
     var datasetRecord = datasetMap.get(key) || datasetMap.set(key, {
       categoryWayDim: 1,
       valueWayDim: 0
-    }); // TODO
+    }); //
     // Auto detect first time axis and do arrangement.
 
     each$1(coordSysDefine.coordSysDims, function (coordDim) {
       // In value way.
       if (coordSysDefine.firstCategoryDimIndex == null) {
         var dataDim = datasetRecord.valueWayDim++;
-        encode[coordDim] = dataDim; // ??? TODO give a better default series name rule?
+        encode[coordDim] = dataDim; // ???   give a better default series name rule?
         // especially when encode x y specified.
         // consider: when mutiple series share one dimension
         // category axis, series name should better use
@@ -19649,7 +19649,7 @@ function makeDefaultEncode(seriesModel, datasetModel, data, sourceFormat, series
           }
     });
   } // Do not make a complex rule! Hard to code maintain and not necessary.
-  // ??? TODO refactor: provide by series itself.
+  // ???   refactor: provide by series itself.
   // [{name: ..., value: ...}, ...] like:
   else if (nSeriesMap.get(seriesType) != null) {
       // Find the first not ordinal. (5 is an experience value)
@@ -20403,7 +20403,7 @@ function initBase(baseOption) {
 
   this._seriesIndices;
   this._seriesIndicesMap;
-  mergeTheme(baseOption, this._theme.option); // TODO Needs clone when merging to the unexisted property
+  mergeTheme(baseOption, this._theme.option); //   Needs clone when merging to the unexisted property
 
   merge(baseOption, globalDefault, false);
   this.mergeOption(baseOption);
@@ -20733,7 +20733,7 @@ OptionManager.prototype = {
    * @return {Object}
    */
   mountOption: function (isRecreate) {
-    var optionBackup = this._optionBackup; // TODO
+    var optionBackup = this._optionBackup; //
     // 如果没有reset功能则不clone。
 
     this._timelineOptions = map$1(optionBackup.timelineOptions, clone$3);
@@ -21496,7 +21496,7 @@ function calculateStack(stackInfoList) {
 * specific language governing permissions and limitations
 * under the License.
 */
-// TODO
+//
 // ??? refactor? check the outer usage of data provider.
 // merge with defaultDimValueGetter?
 /**
@@ -21511,7 +21511,7 @@ function DefaultDataProvider(source, dimSize) {
 
   this._source = source;
   var data = this._data = source.data;
-  var sourceFormat = source.sourceFormat; // Typed array. TODO IE10+?
+  var sourceFormat = source.sourceFormat; // Typed array.   IE10+?
 
   if (sourceFormat === SOURCE_FORMAT_TYPED_ARRAY) {
     this._offset = 0;
@@ -21731,7 +21731,7 @@ function converDataValue(value, dimInfo) {
 // A reason is to avoid format. For example time value we do not know
 // how to format is expected. More over, if stack is used, calculated
 // value may be 0.91000000001, which have brings trouble to display.
-// TODO: consider how to treat null/undefined/NaN when display?
+//  : consider how to treat null/undefined/NaN when display?
 
 /**
  * @param {module:echarts/data/List} data
@@ -21770,7 +21770,7 @@ function retrieveRawValue(data, dataIndex, dim) {
  * data: [{name: 'xx', value: 5, selected: true}, ...]
  * where only sourceFormat is 'original' and 'objectRows' supported.
  *
- * ??? TODO
+ * ???
  * Supported detail options in data item when using 'arrayRows'.
  *
  * @param {module:echarts/data/List} data
@@ -21981,7 +21981,7 @@ var taskProto = Task.prototype;
 
 taskProto.perform = function (performArgs) {
   var upTask = this._upstream;
-  var skip = performArgs && performArgs.skip; // TODO some refactor.
+  var skip = performArgs && performArgs.skip; //   some refactor.
   // Pull data. Must pull data each time, because context.data
   // may be updated by Series.setData.
 
@@ -22510,7 +22510,7 @@ var SeriesModel = ComponentModel.extend({
     var markerId = 0;
 
     function formatArrayValue(value) {
-      // ??? TODO refactor these logic.
+      // ???   refactor these logic.
       // check: category-no-encode-has-axis-data in dataset.html
       var vertially = reduce(value, function (vertially, val, idx) {
         var dimItem = data.getDimensionInfo(idx);
@@ -22744,7 +22744,7 @@ function dataTaskProgress(param, context) {
   if (param.end > context.outputData.count()) {
     context.model.getRawData().cloneShallow(context.outputData);
   }
-} // TODO refactor
+} //   refactor
 
 
 function wrapData(data, seriesModel) {
@@ -23312,7 +23312,7 @@ var seriesColor = {
     var data = seriesModel.getData();
     var colorAccessPath = (seriesModel.visualColorAccessPath || 'itemStyle.color').split('.');
     var color = seriesModel.get(colorAccessPath) // Set in itemStyle
-    || seriesModel.getColorFromPalette( // TODO series count changed.
+    || seriesModel.getColorFromPalette( //   series count changed.
     seriesModel.name, null, ecModel.getSeriesCount()); // Default color
     // FIXME Set color function or use the platte color
 
@@ -23767,7 +23767,7 @@ var proto = Scheduler.prototype;
  */
 
 proto.restoreData = function (ecModel, payload) {
-  // TODO: Only restroe needed series and components, but not all components.
+  //  : Only restroe needed series and components, but not all components.
   // Currently `restoreData` of all of the series and component will be called.
   // But some independent components like `title`, `legend`, `graphic`, `toolbox`,
   // `tooltip`, `axisPointer`, etc, do not need series refresh when `setOption`,
@@ -23781,7 +23781,7 @@ proto.restoreData = function (ecModel, payload) {
   // it should be re-performed when the result array of `getTargetSeries` changed.
   // We use `dependencies` to cover these issues.
   // (3) How to update target series when coordinate system related components modified.
-  // TODO: simply the dirty mechanism? Check whether only the case here can set tasks dirty,
+  //  : simply the dirty mechanism? Check whether only the case here can set tasks dirty,
   // and this case all of the tasks will be set as dirty.
   ecModel.restoreData(payload); // Theoretically an overall task not only depends on each of its target series, but also
   // depends on all of the series.
@@ -23841,7 +23841,7 @@ proto.updateStreamModes = function (seriesModel, view) {
   // case that `chart.appendData`.
 
   var progressiveRender = pipeline.progressiveEnabled && view.incrementalPrepareRender && dataLen >= pipeline.threshold;
-  var large = seriesModel.get('large') && dataLen >= seriesModel.get('largeThreshold'); // TODO: modDataCount should not updated if `appendData`, otherwise cause whole repaint.
+  var large = seriesModel.get('large') && dataLen >= seriesModel.get('largeThreshold'); //  : modDataCount should not updated if `appendData`, otherwise cause whole repaint.
   // see `test/candlestick-large3.html`
 
   var modDataCount = seriesModel.get('progressiveChunkMode') === 'mod' ? dataLen : null;
@@ -24531,7 +24531,7 @@ SVGParser.prototype.parse = function (xml, opt) {
   this._root = root; // parse view port
 
   var viewBox = svg.getAttribute('viewBox') || ''; // If width/height not specified, means "100%" of `opt.width/height`.
-  // TODO: Other percent value not supported yet.
+  //  : Other percent value not supported yet.
 
   var width = parseFloat(svg.getAttribute('width') || opt.width);
   var height = parseFloat(svg.getAttribute('height') || opt.height); // If width/height not specified, set as null for output.
@@ -24606,7 +24606,7 @@ SVGParser.prototype.parse = function (xml, opt) {
 };
 
 SVGParser.prototype._parseNode = function (xmlNode, parentGroup) {
-  var nodeName = xmlNode.nodeName.toLowerCase(); // TODO
+  var nodeName = xmlNode.nodeName.toLowerCase(); //
   // support <style>...</style> in svg, where nodeName is 'style',
   // CSS classes is defined globally wherever the style tags are declared.
 
@@ -24833,7 +24833,7 @@ var nodeParsers = {
     return g;
   },
   'path': function (xmlNode, parentGroup) {
-    // TODO svg fill rule
+    //   svg fill rule
     // https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill-rule
     // path.style.globalCompositeOperation = 'xor';
     var d = xmlNode.getAttribute('d') || ''; // Performance sensitive.
@@ -24929,7 +24929,7 @@ var attributesMap = {
 
 function parseAttributes(xmlNode, el, defs, onlyInlineStyle) {
   var zrStyle = el.__inheritedStyle || {};
-  var isTextEl = el.type === 'text'; // TODO Shadow
+  var isTextEl = el.type === 'text'; //   Shadow
 
   if (xmlNode.nodeType === 1) {
     parseTransformAttribute(xmlNode, el);
@@ -25895,7 +25895,7 @@ var updateMethods = {
     }
 
     scheduler.restoreData(ecModel, payload);
-    scheduler.performSeriesTasks(ecModel); // TODO
+    scheduler.performSeriesTasks(ecModel); //
     // Save total ecModel here for undo/redo (after restoring data and before processing data).
     // Undo (restoration of total ecModel) can be carried out in 'action' or outside API call.
     // Create new coordinate system each update
@@ -28123,7 +28123,7 @@ listProto._initDataFromProvider = function (start, end) {
       val < dimRawExtent[0] && (dimRawExtent[0] = val);
       val > dimRawExtent[1] && (dimRawExtent[1] = val);
     } // ??? FIXME not check by pure but sourceFormat?
-    // TODO refactor these logic.
+    //   refactor these logic.
 
 
     if (!rawData.pure) {
@@ -28306,7 +28306,7 @@ listProto.get = function (dim, idx
   var storage = this._storage;
 
   if (!storage[dim]) {
-    // TODO Warn ?
+    //   Warn ?
     return NaN;
   }
 
@@ -28350,7 +28350,7 @@ listProto.getByRawIndex = function (dim, rawIdx) {
   var dimStore = this._storage[dim];
 
   if (!dimStore) {
-    // TODO Warn ?
+    //   Warn ?
     return NaN;
   }
 
@@ -28560,7 +28560,7 @@ listProto.getMedian = function (dim
     if (!isNaN(val)) {
       dimDataArray.push(val);
     }
-  }); // TODO
+  }); //
   // Use quick select?
   // immutability & sort
 
@@ -29793,7 +29793,7 @@ function completeDimensions(sysDims, source, opt) {
   }
 
   return result;
-} // ??? TODO
+} // ???
 // Originally detect dimCount by data[0]. Should we
 // optimize it to only by sysDims and dimensions and encode.
 // So only necessary dims will be initialized.
@@ -31023,7 +31023,7 @@ function doCalBarWidthAndOffset(seriesInfoList) {
     // will be shared by series. Consider that they have default values,
     // only the attributes set on the last series will work.
     // Do not change this fact unless there will be a break change.
-    // TODO
+    //
 
     var barWidth = seriesInfo.barWidth;
 
@@ -31215,7 +31215,7 @@ function layout(seriesType, ecModel) {
       });
     }
   }, this);
-} // TODO: Do not support stack in large mode yet.
+} //  : Do not support stack in large mode yet.
 
 var largeLayout = {
   seriesType: 'bar',
@@ -31621,7 +31621,7 @@ var LogScale = Scale.extend({
    * @override
    */
   unionExtentFromData: function (data, dim) {
-    // TODO
+    //
     // filter value that <= 0
     this.unionExtent(data.getApproximateExtent(dim));
   },
@@ -32412,7 +32412,7 @@ function symbolPathSetColor(color, innerColor) {
 
 
 function createSymbol(symbolType, x, y, w, h, color, keepAspect) {
-  // TODO Support image object, DynamicImage.
+  //   Support image object, DynamicImage.
   var isEmpty = symbolType.indexOf('empty') === 0;
 
   if (isEmpty) {
@@ -33120,7 +33120,7 @@ function makeLabelsByNumericCategoryInterval(axis, categoryInterval, onlyTick) {
   var ordinalScale = axis.scale;
   var ordinalExtent = ordinalScale.getExtent();
   var labelModel = axis.getLabelModel();
-  var result = []; // TODO: axisType: ordinalTime, pick the tick from each month/day/year/...
+  var result = []; //  : axisType: ordinalTime, pick the tick from each month/day/year/...
 
   var step = Math.max((categoryInterval || 0) + 1, 1);
   var startTick = ordinalExtent[0];
@@ -34029,7 +34029,7 @@ axisDefault.valueAxis = merge({
   // The gap at both ends of the axis. For value axis, [GAP, GAP], where
   // `GAP` can be an absolute pixel number (like `35`), or percent (like `'30%'`)
   boundaryGap: [0, 0],
-  // TODO
+  //
   // min/max: [30, datamin, 60] or [20, datamin] or [datamin, 60]
   // Min value of the axis. can be:
   // + a number
@@ -34298,7 +34298,7 @@ ComponentModel.extend({
 /**
  * Grid is a region which contains at most 4 cartesian systems
  *
- * TODO Default cartesian
+ *   Default cartesian
  */
 /**
  * Check if the axis is used in the specified grid
@@ -34373,7 +34373,7 @@ gridProto.update = function (ecModel, api) {
 
 function fixAxisOnZero(axesMap, otherAxisDim, axis, onZeroRecords) {
   axis.getAxesOnZeroOf = function () {
-    // TODO: onZero of multiple axes.
+    //  : onZero of multiple axes.
     return otherAxisOnZeroOf ? [otherAxisOnZeroOf] : [];
   }; // onZero can not be enabled in these two situations:
   // 1. When any other axis is a category axis.
@@ -35364,7 +35364,7 @@ var LargePath = Path.extend({
 });
 
 function createLarge(seriesModel, group, incremental) {
-  // TODO support polar
+  //   support polar
   var data = seriesModel.getData();
   var startPoint = [];
   var valueIdx = data.getLayout('valueAxisHorizontal') ? 1 : 0;
@@ -38445,7 +38445,7 @@ Chart.extend({
       });
 
       if (step) {
-        // TODO If stacked series is not step
+        //   If stacked series is not step
         points = turnPointsIntoStep(points, coordSys, step);
         stackedOnPoints = turnPointsIntoStep(stackedOnPoints, coordSys, step);
       }
@@ -38488,7 +38488,7 @@ Chart.extend({
         } else {
           // Not do it in update with animation
           if (step) {
-            // TODO If stacked series is not step
+            //   If stacked series is not step
             points = turnPointsIntoStep(points, coordSys, step);
             stackedOnPoints = turnPointsIntoStep(stackedOnPoints, coordSys, step);
           }
@@ -38673,7 +38673,7 @@ Chart.extend({
     var stackedOnNext = diff.stackedOnNext;
 
     if (step) {
-      // TODO If stacked series is not step
+      //   If stacked series is not step
       current = turnPointsIntoStep(diff.current, coordSys, step);
       stackedOnCurrent = turnPointsIntoStep(diff.stackedOnCurrent, coordSys, step);
       next = turnPointsIntoStep(diff.next, coordSys, step);
@@ -38979,7 +38979,7 @@ var samplers = {
 
     return isFinite(min) ? min : NaN;
   },
-  // TODO
+  //
   // Median
   nearest: function (frame) {
     return frame[0];
@@ -40338,7 +40338,7 @@ SeriesModel.extend({
 */
 
 /* global Float32Array */
-// TODO Batch by color
+//   Batch by color
 var BOOST_SIZE_THRESHOLD = 4;
 var LargeSymbolPath = extendShape({
   shape: {
@@ -40400,7 +40400,7 @@ var LargeSymbolPath = extendShape({
     this.restoreTransform(ctx);
   },
   findDataIndex: function (x, y) {
-    // TODO ???
+    //   ???
     // Consider transform
     var shape = this.shape;
     var points = shape.points;
@@ -40518,9 +40518,9 @@ largeSymbolProto.incrementalUpdate = function (taskParams, data) {
 };
 
 largeSymbolProto._setCommon = function (symbolEl, data, isIncremental) {
-  var hostModel = data.hostModel; // TODO
+  var hostModel = data.hostModel; //
   // if (data.hasItemVisual.symbolSize) {
-  //     // TODO typed array?
+  //     //   typed array?
   //     symbolEl.setShape('sizes', data.mapArray(
   //         function (idx) {
   //             var size = data.getItemVisual(idx, 'symbolSize');
@@ -40857,7 +40857,7 @@ effectSymbolProto.startEffectAnimation = function (effectCfg) {
       silent: true,
       scale: [0.5, 0.5]
     });
-    var delay = -i / EFFECT_RIPPLE_NUMBER * effectCfg.period + effectCfg.effectOffset; // TODO Configurable effectCfg.period
+    var delay = -i / EFFECT_RIPPLE_NUMBER * effectCfg.period + effectCfg.effectOffset; //   Configurable effectCfg.period
 
     ripplePath.animate('', true).when(effectCfg.period, {
       scale: [effectCfg.rippleScale / 2, effectCfg.rippleScale / 2]
@@ -41890,7 +41890,7 @@ inherits(IndicatorAxis, Axis);
 * specific language governing permissions and limitations
 * under the License.
 */
-// TODO clockwise
+//   clockwise
 function Radar(radarModel, ecModel, api) {
   this._model = radarModel;
   /**
@@ -48451,7 +48451,7 @@ var treemapLayout = {
         leafDepth: seriesOption.leafDepth
       }; // layout should be cleared because using updateView but not update.
 
-      viewRoot.hostTree.clearLayouts(); // TODO
+      viewRoot.hostTree.clearLayouts(); //
       // optimize: if out of view clip, do not layout.
       // But take care that if do not render node out of view clip,
       // how to calculate start po
@@ -53188,7 +53188,7 @@ inherits(EffectPolyline, EffectLine);
 * specific language governing permissions and limitations
 * under the License.
 */
-// TODO Batch by color
+//   Batch by color
 var LargeLineShape = extendShape({
   shape: {
     polyline: false,
@@ -53588,12 +53588,12 @@ extendChartView({
     var pipelineContext = seriesModel.pipelineContext;
 
     if (!this._finished || pipelineContext.large || pipelineContext.progressiveRender) {
-      // TODO Don't have to do update in large mode. Only do it when there are millions of data.
+      //   Don't have to do update in large mode. Only do it when there are millions of data.
       return {
         update: true
       };
     } else {
-      // TODO Use same logic with ScatterView.
+      //   Use same logic with ScatterView.
       // Manually update layout
       var res = linesLayout.reset(seriesModel);
 
@@ -54044,7 +54044,7 @@ graphProto.breadthFirstTraverse = function (cb, startNode, direction, context) {
       }
     }
   }
-}; // TODO
+}; //
 // graphProto.depthFirstTraverse = function (
 //     cb, startNode, direction, context
 // ) {
@@ -54297,7 +54297,7 @@ enableClassCheck(Edge);
 * under the License.
 */
 var createGraphFromNodeEdge = function (nodes, edges, seriesModel, directed, beforeLink) {
-  // ??? TODO
+  // ???
   // support dataset?
   var graph = new Graph(directed);
 
@@ -56024,7 +56024,7 @@ registerCoordinateSystem('graphView', {
 var BoxplotSeries = SeriesModel.extend({
   type: 'series.boxplot',
   dependencies: ['xAxis', 'yAxis', 'grid'],
-  // TODO
+  //
   // box width represents group size, so dimension should have 'size'.
 
   /**
@@ -56949,9 +56949,9 @@ Parallel.prototype = {
       var rotation = rotationTable[layout];
       var transform = create$1();
       rotate(transform, transform, rotation);
-      translate(transform, transform, position); // TODO
+      translate(transform, transform, position); //
       // tick等排布信息。
-      // TODO
+      //
       // 根据axis order 更新 dimensions顺序。
 
       this._axesLayout[dim] = {
@@ -62493,17 +62493,17 @@ function dispatchHighDownActually(axesInfo, dispatchAction, api) {
   }); // Diff.
 
   var toHighlight = [];
-  var toDownplay = [];
+  var  wnplay = [];
   each$1(lastHighlights, function (batchItem, key) {
-    !newHighlights[key] && toDownplay.push(batchItem);
+    !newHighlights[key] &&  wnplay.push(batchItem);
   });
   each$1(newHighlights, function (batchItem, key) {
     !lastHighlights[key] && toHighlight.push(batchItem);
   });
-  toDownplay.length && api.dispatchAction({
+   wnplay.length && api.dispatchAction({
     type: 'downplay',
     escapeConnect: true,
-    batch: toDownplay
+    batch:  wnplay
   });
   toHighlight.length && api.dispatchAction({
     type: 'highlight',
@@ -63397,7 +63397,7 @@ function buildLabelElOption(elOption, axisModel, axisPointerModel, api, labelPos
       r: labelModel.get('borderRadius')
     },
     position: position.slice(),
-    // TODO: rich
+    //  : rich
     style: {
       text: text,
       textFont: font,
@@ -63966,7 +63966,7 @@ var ThemeRiverSeries = SeriesModel.extend({
 
     var filterData = filter(option.data, function (dataItem) {
       return dataItem[2] !== undefined;
-    }); // ??? TODO design a stage to transfer data for themeRiver and lines?
+    }); // ???   design a stage to transfer data for themeRiver and lines?
 
     var data = this.fixData(filterData || []);
     var nameList = [];
@@ -66846,7 +66846,7 @@ extendComponentModel({
 * specific language governing permissions and limitations
 * under the License.
 */
-// TODO Axis scale
+//   Axis scale
 /**
  * Resize method bound to the polar
  * @param {module:echarts/coord/polar/PolarModel} polarModel
@@ -70285,7 +70285,7 @@ extendComponentModel({
         color: '#999',
         width: 1,
         type: 'dashed',
-        // TODO formatter
+        //   formatter
         textStyle: {} // lineStyle and shadowStyle should not be specified here,
         // otherwise it will always override those styles on option.axisPointer.
 
@@ -70646,7 +70646,7 @@ TooltipRichContent.prototype = {
           textHeight: 4,
           textBorderRadius: 2,
           textBackgroundColor: markerRich[name],
-          // TODO: textOffset is not implemented for rich text
+          //  : textOffset is not implemented for rich text
           textOffset: [3, 0]
         };
       } else {
@@ -70881,7 +70881,7 @@ extendComponentView({
    *      dataIndex or dataIndexInside or name
    * });
    *
-   *  TODO Batch
+   *    Batch
    */
   manuallyShowTip: function (tooltipModel, ecModel, api, payload) {
     if (payload.from === this.uid || env$1.node) {
@@ -71745,7 +71745,7 @@ function markerTypeCalculatorWithExtent(mlType, data, otherDataDim, targetDataDi
   return coordArr;
 }
 
-var curry$5 = curry; // TODO Specified percent
+var curry$5 = curry; //   Specified percent
 
 var markerTypeCalculator = {
   /**
@@ -72030,7 +72030,7 @@ MarkerView.extend({
         color: itemModel.get('itemStyle.color') || seriesData.getVisual('color'),
         symbol: itemModel.getShallow('symbol')
       });
-    }); // TODO Text are wrong
+    }); //   Text are wrong
 
     symbolDraw.updateData(mpData);
     this.group.add(symbolDraw.group); // Set host model for tooltip
@@ -72575,7 +72575,7 @@ MarkerModel.extend({
 * specific language governing permissions and limitations
 * under the License.
 */
-// TODO Better on polar
+//   Better on polar
 var markAreaTransform = function (seriesModel, coordSys, maModel, item) {
   var lt = dataTransform(seriesModel, item[0]);
   var rb = dataTransform(seriesModel, item[1]);
@@ -74538,7 +74538,7 @@ AxisProxy.prototype = {
     // ) {
     //     filterMode = 'empty';
     // }
-    // TODO
+    //
     // filterMode 'weakFilter' and 'empty' is not optimized for huge data yet.
 
 
@@ -83165,7 +83165,7 @@ function initVML() {
 }
 
 // http://www.w3.org/TR/NOTE-VML
-// TODO Use proxy like svg instead of overwrite brush methods
+//   Use proxy like svg instead of overwrite brush methods
 var CMD$3 = PathProxy.CMD;
 var round$4 = Math.round;
 var sqrt = Math.sqrt;
@@ -83249,7 +83249,7 @@ if (!env$1.canvasSupported) {
   };
 
   var updateFillNode = function (el, style, zrEl) {
-    // TODO pattern
+    //   pattern
     var fill = style.fill;
 
     if (fill != null) {
@@ -84086,7 +84086,7 @@ if (!env$1.canvasSupported) {
       textVmlElStyle.top = round$4(y) + 'px';
     }
 
-    textPathEl.string = encodeHtmlAttribute(text); // TODO
+    textPathEl.string = encodeHtmlAttribute(text); //
 
     try {
       textPathEl.style.font = font;
@@ -84322,7 +84322,7 @@ function createElement(name) {
   return document.createElementNS(svgURI, name);
 }
 
-// TODO
+//
 // 1. shadow
 // 2. Image: sx, sy, sw, sh
 var CMD$4 = PathProxy.CMD;
@@ -85733,7 +85733,7 @@ ShadowManager.prototype.updateDom = function (displayable, dom) {
 
   var style = displayable.style;
   var scaleX = displayable.scale ? displayable.scale[0] || 1 : 1;
-  var scaleY = displayable.scale ? displayable.scale[1] || 1 : 1; // TODO: textBoxShadowBlur is not supported yet
+  var scaleY = displayable.scale ? displayable.scale[1] || 1 : 1; //  : textBoxShadowBlur is not supported yet
 
   var offsetX, offsetY, blur, color;
 
@@ -85788,7 +85788,7 @@ ShadowManager.prototype.markUsed = function (displayable) {
 };
 
 function hasShadow(style) {
-  // TODO: textBoxShadowBlur is not supported yet
+  //  : textBoxShadowBlur is not supported yet
   return style && (style.shadowBlur || style.shadowOffsetX || style.shadowOffsetY || style.textShadowBlur || style.textShadowOffsetX || style.textShadowOffsetY);
 }
 
@@ -85898,7 +85898,7 @@ SVGPainter.prototype = {
     this._paintList(list);
   },
   setBackgroundColor: function (backgroundColor) {
-    // TODO gradient
+    //   gradient
     this._viewport.style.background = backgroundColor;
   },
   _paintList: function (list) {

@@ -17,7 +17,7 @@ import javax.crypto.spec.DESKeySpec;
 /**
  * @author TangLongHui
  * @data created on 2019/3/13.
- * @describe TODO 扫一扫工具类
+ * @describe   扫一扫工具类
  */
 
 public class ScanUtils {
@@ -26,7 +26,7 @@ public class ScanUtils {
 
 
     /**
-     * @Description: TODO
+     * @Description:
      * @param: tag 标识
      * @param: scanStr 扫码解析出来的字符串
      * @param: decrypt 是否解密
@@ -72,7 +72,7 @@ public class ScanUtils {
     /**
      * @author TangLongHui
      * @data created on 2019/7/2
-     * @describe TODO 需要解密使用自定义秘钥
+     * @describe   需要解密使用自定义秘钥
      */
     public static void analysis(String tag, String scanStr, String decryptKey, onCallbackListener listener){
        analysis(tag,scanStr,true,decryptKey,listener);
@@ -80,7 +80,7 @@ public class ScanUtils {
     /**
      * @author TangLongHui
      * @data created on 2019/7/2
-     * @describe TODO true 默认解密 false 不解密
+     * @describe   true 默认解密 false 不解密
      */
     public static void analysis(String tag, String scanStr, boolean isdefaultDecrypt, onCallbackListener listener){
         if (isdefaultDecrypt){
@@ -93,7 +93,7 @@ public class ScanUtils {
     /**
      * @author TangLongHui
      * @data created on 2019/7/2
-     * @describe TODO 不解密
+     * @describe   不解密
      */
     public static void analysis(String tag, String scanStr, onCallbackListener listener){
         analysis(tag,scanStr,false,null,listener);
@@ -142,7 +142,7 @@ public class ScanUtils {
     /**
      * @author TangLongHui
      * @data created on 2019/7/2
-     * @describe TODO 获得 key
+     * @describe   获得 key
      */
     private static Key getRawKey(String key) throws Exception {
         DESKeySpec dks = new DESKeySpec(Base64.decode(key.getBytes(),0));

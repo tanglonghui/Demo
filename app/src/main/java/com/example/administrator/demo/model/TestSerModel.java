@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * @author TangLongHui
  * @data created on 2019/6/4.
- * @describe TODO 学生考勤统计列表信息
+ * @describe   学生考勤统计列表信息
  */
 public class TestSerModel {
 

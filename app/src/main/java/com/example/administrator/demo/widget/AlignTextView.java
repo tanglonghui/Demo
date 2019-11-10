@@ -13,7 +13,7 @@ import android.util.AttributeSet;
 /**
  * @author TangLongHui
  * @data created on 2019/8/22
- * @describe TODO 文字两端对齐的textview
+ * @describe   文字两端对齐的textview
  */
 
 public class AlignTextView extends AppCompatTextView {

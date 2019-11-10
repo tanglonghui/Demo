@@ -3,17 +3,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical"
     tools:context="com.example.administrator.demo.viewEventDispatch.ViewEventDispatchActivity">
 
     <com.example.administrator.demo.viewEventDispatch.ViewEventDispatchLinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/view_group"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:background="#34ca5f"
+        android:gravity="center"
         android:orientation="vertical">
 
         <com.example.administrator.demo.viewEventDispatch.ViewEventDispatchTextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:id="@+id/view"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@color/colorAccent"
             android:clickable="true"
             android:gravity="center"
             android:text="hello world" />

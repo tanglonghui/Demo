@@ -5,7 +5,7 @@ import android.util.Log;
 /**
  * @author TangLongHui
  * @data created on 2019/9/16.
- * @describe TODO
+ * @describe
  */
 public class RunnableA implements Runnable {
     @Override

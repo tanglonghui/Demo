@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * @author TangLongHui
  * @data created on 2019/5/8
- * @describe TODO  考勤统计适配器
+ * @describe    考勤统计适配器
  */
 
 public class ViewAdapter2<T> extends RecyclerView.Adapter {

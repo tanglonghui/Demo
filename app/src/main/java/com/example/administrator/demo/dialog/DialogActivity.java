@@ -1,10 +1,12 @@
 package com.example.administrator.demo.dialog;
 
+import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 
@@ -20,6 +22,8 @@ public class DialogActivity extends AppCompatActivity {
     TextView tv1;
     @BindView(R.id.tv_2)
     TextView tv2;
+    @BindView(R.id.tv_3)
+    TextView tv3;
     private AlertDialog alertDialog;
 
     @Override
@@ -29,7 +33,7 @@ public class DialogActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.tv_1, R.id.tv_2})
+    @OnClick({R.id.tv_1, R.id.tv_2, R.id.tv_3})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.tv_1:
@@ -69,6 +73,31 @@ public class DialogActivity extends AppCompatActivity {
                 builder1.setCancelable(true); //强制更新 则 弹出框不消失
                 alertDialog = builder1.create();
                 builder1.show();
+                break;
+            case R.id.tv_3:
+                AlertDialog.Builder builder2 = new AlertDialog.Builder(this);
+                LayoutInflater inflateradd = LayoutInflater.from(this);
+                View inflateclazzs = inflateradd.inflate(R.layout.dialog_test, null);
+                TextView tv_target = inflateclazzs.findViewById(R.id.tv_target);
+                TextView tv_bt_ok = inflateclazzs.findViewById(R.id.tv_bt_ok);
+
+                tv_target.setText("asfdsgasdgadsgasdgasdg");
+
+
+                final Dialog dialog = builder2.create();
+                dialog.show();
+
+                //监听
+                tv_bt_ok.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
+
+                dialog.getWindow().setContentView(inflateclazzs);//自定义布局应该在这里添加，要在dialog.show()的后面
+                //给AlertDialog设置4个圆角
+                dialog.getWindow().setBackgroundDrawableResource(R.drawable.shape_1);
                 break;
         }
     }

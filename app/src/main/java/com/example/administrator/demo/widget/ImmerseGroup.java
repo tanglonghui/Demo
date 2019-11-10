@@ -7,7 +7,7 @@ import android.widget.FrameLayout;
 
 /**
  * Created by Administrator on 2019/5/14.
- * TODO 解决adjustResize和  android:fitsSystemWindows="true"冲突问题
+ *   解决adjustResize和  android:fitsSystemWindows="true"冲突问题
  */
 
 public class ImmerseGroup extends FrameLayout {

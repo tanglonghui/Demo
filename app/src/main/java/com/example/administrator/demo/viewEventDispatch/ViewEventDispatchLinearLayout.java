@@ -10,10 +10,10 @@ import android.view.MotionEvent;
 /**
  * @author TangLongHui
  * @data created on 2019/9/2.
- * @describe TODO 学习事件分发
+ * @describe 学习事件分发
  */
 public class ViewEventDispatchLinearLayout extends LinearLayoutCompat {
-    private String TAG = "VEDispatchLinearLayout";
+    private String TAG = "ViewGroup";
 
     public ViewEventDispatchLinearLayout(Context context) {
         super(context);
@@ -32,7 +32,7 @@ public class ViewEventDispatchLinearLayout extends LinearLayoutCompat {
     public boolean dispatchTouchEvent(MotionEvent ev) {
         switch (ev.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                Log.e(this.getClass().getSimpleName(), " dispatchTouchEvent--" );
+                Log.e(TAG, " dispatchTouchEvent--");
                 break;
             case MotionEvent.ACTION_MOVE:
 
@@ -51,7 +51,7 @@ public class ViewEventDispatchLinearLayout extends LinearLayoutCompat {
     public boolean onTouchEvent(MotionEvent ev) {
         switch (ev.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                Log.e(this.getClass().getSimpleName(), " onTouchEvent--" );
+                Log.e(TAG, " onTouchEvent--");
                 break;
             case MotionEvent.ACTION_MOVE:
 
@@ -60,10 +60,25 @@ public class ViewEventDispatchLinearLayout extends LinearLayoutCompat {
 
                 break;
             case MotionEvent.ACTION_CANCEL:
-
+                Log.e(TAG, " ACTION_CANCEL--");
                 break;
         }
         return super.onTouchEvent(ev);
+    }
+
+    @Override
+    public boolean onInterceptTouchEvent(MotionEvent ev) {
+        boolean result = super.onInterceptTouchEvent(ev);
+        Log.e(TAG, " onInterceptTouchEvent--" + result);
+        switch (ev.getAction()) {
+            case MotionEvent.ACTION_UP:
+                return true;
+            case MotionEvent.ACTION_DOWN:
+                return true;
+//            case MotionEvent.ACTION_CANCEL:
+//                return true;
+        }
+        return result;
     }
 
     private void Log(String s) {

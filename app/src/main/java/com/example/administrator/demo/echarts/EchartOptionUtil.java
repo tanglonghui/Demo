@@ -9,7 +9,7 @@ import com.github.abel533.echarts.series.Line;
 /**
  * @author TangLongHui
  * @data created on 2019/8/8.
- * @describe TODO
+ * @describe
  */
 public class EchartOptionUtil {
 
