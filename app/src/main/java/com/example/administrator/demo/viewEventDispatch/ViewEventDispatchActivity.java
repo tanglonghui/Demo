@@ -49,7 +49,6 @@ public class ViewEventDispatchActivity extends AppCompatActivity {
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
         switch (ev.getAction()) {
-
             case MotionEvent.ACTION_DOWN:
                 Log.e(TAG, " dispatchTouchEvent--");
                 break;
