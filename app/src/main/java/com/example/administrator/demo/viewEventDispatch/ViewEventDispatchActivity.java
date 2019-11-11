@@ -4,12 +4,10 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MotionEvent;
-import android.view.View;
 
 import com.example.administrator.demo.R;
 import com.example.librarytest.utils.T;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -19,10 +17,10 @@ import butterknife.ButterKnife;
  */
 
 public class ViewEventDispatchActivity extends AppCompatActivity {
-    @BindView(R.id.view)
-    ViewEventDispatchTextView view;
-    @BindView(R.id.view_group)
-    ViewEventDispatchLinearLayout viewGroup;
+//    @BindView(R.id.view)
+//    ViewEventDispatchTextView view;
+//    @BindView(R.id.view_group)
+//    ViewEventDispatchLinearLayout viewGroup;
     private String TAG = "Activity";
 
     @Override
@@ -36,12 +34,12 @@ public class ViewEventDispatchActivity extends AppCompatActivity {
 //                T.ss("view 点击事件");
 //            }
 //        });
-        viewGroup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                T.ss("viewGroup 点击事件");
-            }
-        });
+//        viewGroup.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                T.ss("viewGroup 点击事件");
+//            }
+//        });
     }
 
     public void doOnclick() {
