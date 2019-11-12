@@ -65,7 +65,8 @@
         <activity android:name=".rich_text.RichTextActivity" />
         <activity android:name=".video.AndroidVideoActivity" />
         <activity android:name=".string.StringTestActivity" />
-        <activity android:name=".test.TestActivity"></activity>
+        <activity android:name=".test.TestActivity" />
+        <activity android:name=".viewDraw.VeiwDrawActivity"></activity>
     </application>
 
 </manifest>
