@@ -22,6 +22,7 @@ import com.example.administrator.demo.model.EasyModel;
 import com.example.administrator.demo.recycleview.CitySelect.CityPickerActivity;
 import com.example.administrator.demo.recycleview.OpenRecordActivity;
 import com.example.administrator.demo.recycleview.ViewRecycle.ViewActivity;
+import com.example.administrator.demo.regular.RegularActivity;
 import com.example.administrator.demo.res.SelectorActivity;
 import com.example.administrator.demo.res.ShapeActivity;
 import com.example.administrator.demo.retrofit.RetrofitActivity;
@@ -108,7 +109,9 @@ public class MainActivity extends AppCompatActivity {
         mList.add(new EasyModel("富文本，图文混排", RichTextActivity.class));
         mList.add(new EasyModel("视频播放合集", AndroidVideoActivity.class));
         mList.add(new EasyModel("StringTest", StringTestActivity.class));
+        mList.add(new EasyModel("正则简单学习了解", RegularActivity.class));
         mList.add(new EasyModel("Test", TestActivity.class));
+
     }
 
     @OnClick(R.id.tv_Test)
