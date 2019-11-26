@@ -34,6 +34,8 @@ public class EnumActivity extends AppCompatActivity {
                 MKLog.d(Enum2.A.toString());
                 MKLog.d(Enum3.A.getCode()+"");
                 MKLog.d(Enum4.A.getDescription());
+                Enum4 str = Enum4.valueOf("A");
+                MKLog.d(str.getDescription());
                 break;
             case R.id.tv_2:
                 for (ErrorCode s : ErrorCode.values()) {
@@ -93,6 +95,32 @@ public class EnumActivity extends AppCompatActivity {
         public void setCode(int code) {
             this.code = code;
         }
+    }
+    public enum Enum5 {
+        A(1,"11"),B(2,"22"),C(3,"33"),D(4,"44");
+        private int code;
+        private String description;
+        Enum5(int i,String str) {
+            code=i;
+            description=str;
+        }
+
+        public String getDescription() {
+            return description;
+        }
+
+        public void setDescription(String description) {
+            this.description = description;
+        }
+
+        public int getCode() {
+            return code;
+        }
+
+        public void setCode(int code) {
+            this.code = code;
+        }
+
     }
     public enum ErrorCode {
         OK(0) {
