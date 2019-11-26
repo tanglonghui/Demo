@@ -16,6 +16,7 @@ import com.example.administrator.demo.date.DateActivity;
 import com.example.administrator.demo.dialog.DialogActivity;
 import com.example.administrator.demo.drawable.DrawableActivity;
 import com.example.administrator.demo.echarts.EchartsActivity;
+import com.example.administrator.demo.enum_demo.EnumActivity;
 import com.example.administrator.demo.io.IOActivity;
 import com.example.administrator.demo.json.JsonActivity;
 import com.example.administrator.demo.model.EasyModel;
@@ -111,6 +112,7 @@ public class MainActivity extends AppCompatActivity {
         mList.add(new EasyModel("StringTest", StringTestActivity.class));
         mList.add(new EasyModel("正则简单学习了解", RegularActivity.class));
         mList.add(new EasyModel("Test", TestActivity.class));
+        mList.add(new EasyModel("Enum 学习", EnumActivity.class));
 
     }
 

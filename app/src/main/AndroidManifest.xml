@@ -67,7 +67,8 @@
         <activity android:name=".string.StringTestActivity" />
         <activity android:name=".test.TestActivity" />
         <activity android:name=".viewDraw.VeiwDrawActivity" />
-        <activity android:name=".regular.RegularActivity"></activity>
+        <activity android:name=".regular.RegularActivity" />
+        <activity android:name=".enum_demo.EnumActivity"></activity>
     </application>
 
 </manifest>
