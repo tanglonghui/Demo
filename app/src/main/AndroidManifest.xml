@@ -68,7 +68,8 @@
         <activity android:name=".test.TestActivity" />
         <activity android:name=".viewDraw.VeiwDrawActivity" />
         <activity android:name=".regular.RegularActivity" />
-        <activity android:name=".enum_demo.EnumActivity"></activity>
+        <activity android:name=".enum_demo.EnumActivity" />
+        <activity android:name=".recycleview.xrecycleview_test.XrecycleviewTestActivity"></activity>
     </application>
 
 </manifest>
