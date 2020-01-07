@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.TextView;
 
 import com.example.administrator.demo.AndroidBug5497.AndroidBug5479Activity;
@@ -36,6 +37,7 @@ import com.example.administrator.demo.test.testPaper.TestPaperActivity;
 import com.example.administrator.demo.testPaper.MyTestPaperActivity;
 import com.example.administrator.demo.thread.ThreadActivity;
 import com.example.administrator.demo.video.AndroidVideoActivity;
+import com.example.administrator.demo.viewDraw.ViewDrawActivity;
 import com.example.administrator.demo.viewEventDispatch.ViewEventDispatchActivity;
 import com.example.administrator.demo.viewLocation.ViewLocationActivity;
 import com.example.administrator.demo.web.WebActivity;
@@ -102,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
         mList.add(new EasyModel(" Thread 线程", ThreadActivity.class));
         mList.add(new EasyModel(" Drawable 常见控件属性设置", DrawableActivity.class));
         mList.add(new EasyModel("安卓事件分发机制学习Demo", ViewEventDispatchActivity.class));
+        mList.add(new EasyModel("安卓事件自定义View学习Demo", ViewDrawActivity.class));
         mList.add(new EasyModel("SharedPreferencesDemo", SharedPreferencesActivity.class));
         mList.add(new EasyModel("文件操作 IO 流", IOActivity.class));
         mList.add(new EasyModel("view 的移动与定位", ViewLocationActivity.class));

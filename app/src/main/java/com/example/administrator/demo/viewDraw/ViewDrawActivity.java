@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import com.example.administrator.demo.R;
 
-public class VeiwDrawActivity extends AppCompatActivity {
+public class ViewDrawActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

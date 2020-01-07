@@ -66,7 +66,7 @@
         <activity android:name=".video.AndroidVideoActivity" />
         <activity android:name=".string.StringTestActivity" />
         <activity android:name=".test.TestActivity" />
-        <activity android:name=".viewDraw.VeiwDrawActivity" />
+        <activity android:name=".viewDraw.ViewDrawActivity" />
         <activity android:name=".regular.RegularActivity" />
         <activity android:name=".enum_demo.EnumActivity" />
         <activity android:name=".recycleview.xrecycleview_test.XrecycleviewTestActivity"></activity>
