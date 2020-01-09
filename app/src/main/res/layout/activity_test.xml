@@ -17,4 +17,8 @@
         android:id="@+id/tv_1"
         style="@style/ContentTextView"
         android:text="一" />
+    <TextView
+        android:id="@+id/tv_2"
+        style="@style/ContentTextView"
+        android:text="关于list集合序列化的测试" />
 </LinearLayout>
