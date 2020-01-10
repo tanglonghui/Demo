@@ -38,7 +38,7 @@ public class TestInfo implements Serializable{
         this.list = list;
     }
 
-    public class MyBean implements Serializable{
+    public  class MyBean implements Serializable{
         private String name;
         private String job;
 

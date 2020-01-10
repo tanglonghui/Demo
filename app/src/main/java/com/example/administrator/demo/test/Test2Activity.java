@@ -8,7 +8,9 @@ import android.os.Bundle;
 import com.example.administrator.demo.R;
 
 import java.io.Serializable;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Test2Activity extends AppCompatActivity {
 
@@ -18,6 +20,8 @@ public class Test2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_test2);
         getTestInfo();
         getListInfo();
+        getListArray();
+        getListMap();
     }
 
     void getTestInfo() {
@@ -25,6 +29,12 @@ public class Test2Activity extends AppCompatActivity {
     }
     void getListInfo() {
         List<TestInfo> list = (List) getIntent().getSerializableExtra("list");
+    }
+    void getListArray() {
+        TestInfo[] array = (TestInfo[]) getIntent().getSerializableExtra("array");
+    }
+    void getListMap() {
+        Map<String, String> message = (Map<String, String>) getIntent().getSerializableExtra("message");
     }
 
 
@@ -36,6 +46,22 @@ public class Test2Activity extends AppCompatActivity {
     public static void lunch(Activity activity, List<TestInfo> list) {
         Intent intent = new Intent(activity, Test2Activity.class);
         intent.putExtra("list", (Serializable) list);
+        activity.startActivity(intent);
+    }
+    public static void lunch2(Activity activity, List<TestInfo> list) {
+        Intent intent = new Intent(activity, Test2Activity.class);
+        TestInfo[] array=new TestInfo[list.size()];
+        list.toArray(array);
+        intent.putExtra("array", array);
+        activity.startActivity(intent);
+    }
+
+    public static void lunch(Activity activity) {
+        Intent intent = new Intent(activity, Test2Activity.class);
+        Map<String, String> message = new HashMap<String, String>();
+        message.put("name", "name");
+        message.put("time", "time");
+        intent.putExtra("message", (Serializable) message);
         activity.startActivity(intent);
     }
 }

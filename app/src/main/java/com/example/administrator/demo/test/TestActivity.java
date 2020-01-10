@@ -51,11 +51,12 @@ public class TestActivity extends AppCompatActivity {
                 cbCheck.setChecked(aBoolean);
                 break;
             case R.id.tv_2:
-//                Test2Activity.lunch(TestActivity.this,new TestInfo());
-                ArrayList list=new ArrayList();
-                list.add(new TestInfo());
-                list.add(new TestInfo());
-                Test2Activity.lunch(TestActivity.this,list);
+                Test2Activity.lunch(TestActivity.this,new TestInfo());
+//                ArrayList list=new ArrayList();
+//                list.add(new TestInfo());
+//                list.add(new TestInfo());
+//                Test2Activity.lunch2(TestActivity.this,list);
+//                Test2Activity.lunch(TestActivity.this);
                 break;
         }
     }
