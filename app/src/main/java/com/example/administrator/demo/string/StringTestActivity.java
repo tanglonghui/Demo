@@ -31,10 +31,16 @@ public class StringTestActivity extends AppCompatActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.tv_easy:
-                String imgUrl = "http://127.0.0.1:8080/cms/ReadAddress/1479805098158.jpg";
-                T.ss("" + imgUrl.lastIndexOf("."));
-                String image = imgUrl.substring(0,imgUrl.lastIndexOf("."));
-                Log.e(TAG, image);
+//                分割测试：
+//                String imgUrl = "http://127.0.0.1:8080/cms/ReadAddress/1479805098158.jpg";
+//                T.ss("" + imgUrl.lastIndexOf("."));
+//                String image = imgUrl.substring(0,imgUrl.lastIndexOf("."));
+//                Log.e(TAG, image);
+
+                int i = 0;
+                Log.e(TAG + (++i), "\\\\.");
+                String str = "1.2:3-4";
+                String[] strings = str.split("\\.|:|-");
                 break;
             case R.id.tv_easy2:
                 break;
