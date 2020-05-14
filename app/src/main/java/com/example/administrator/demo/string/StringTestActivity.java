@@ -43,6 +43,7 @@ public class StringTestActivity extends AppCompatActivity {
                 String[] strings = str.split("\\.|:|-");
                 break;
             case R.id.tv_easy2:
+                Log.e(TAG,StringTestActivity.class.toString());
                 break;
         }
     }
