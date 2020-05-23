@@ -37,6 +37,8 @@ public class AddViewByCodeActivity extends AppCompatActivity {
                 LinearLayout linearLayout = new LinearLayout(AddViewByCodeActivity.this);
                 linearLayout.setOrientation(LinearLayout.HORIZONTAL);
                 linearLayout.setBackgroundColor(Color.RED);
+//                linearLayout.setId(View.generateViewId()); // 17 以上
+                linearLayout.setId(R.id.my_view);
                 flContent.addView(linearLayout);
             }
         });
