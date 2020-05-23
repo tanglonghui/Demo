@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.widget.TextView;
 
 import com.example.administrator.demo.bug_box.AndroidBug5497.AndroidBug5479Activity;
+import com.example.administrator.demo.view.AddViewByCodeActivity;
 import com.example.administrator.demo.view.PopupWindow.PopupWindowActivity;
 import com.example.administrator.demo.view.PopupWindow.popupwindowFromGitHup.activity.PopuWindowDemoActivity;
 import com.example.administrator.demo.android_base.SharedPreferences.SharedPreferencesActivity;
@@ -117,6 +118,7 @@ public class MainActivity extends AppCompatActivity {
         mList.add(new EasyModel("Test", TestActivity.class));
         mList.add(new EasyModel("Enum 学习", EnumActivity.class));
         mList.add(new EasyModel("XrecycleviewTest", XrecycleviewTestActivity.class));
+        mList.add(new EasyModel("使用代码添加 view", AddViewByCodeActivity.class));
 
     }
 
