@@ -4,9 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.administrator.demo.AndroidBug5497.AndroidBug5479Activity">
+    tools:context=".bug_box.AndroidBug5497.AndroidBug5479Activity">
     <!--自定义标题-->
-    <com.example.administrator.demo.AndroidBug5497.ImmerseGroup
+    <com.example.administrator.demo.bug_box.AndroidBug5497.ImmerseGroup
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#26cfbe"
@@ -22,7 +22,7 @@
     android:padding="20dp"
     android:text="标题怎么说" />
     </RelativeLayout>
-    </com.example.administrator.demo.AndroidBug5497.ImmerseGroup>
+    </com.example.administrator.demo.bug_box.AndroidBug5497.ImmerseGroup>
     <!--普通设置的标题-->
     <!--<FrameLayout-->
         <!--android:layout_width="match_parent"-->

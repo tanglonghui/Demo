@@ -32,7 +32,7 @@
             android:textStyle="bold"
             android:visibility="gone" />
 
-        <com.example.administrator.demo.recycleview.CitySelect.widget.SideLetterBar
+        <com.example.administrator.demo.android_base.recycleview.CitySelect.widget.SideLetterBar
             android:id="@+id/side_letter_bar"
             android:layout_width="36dp"
             android:layout_height="match_parent"

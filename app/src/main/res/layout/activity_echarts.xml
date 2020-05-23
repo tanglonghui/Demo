@@ -5,11 +5,11 @@
     android:layout_height="match_parent"
     >
 
-    <com.example.administrator.demo.echarts.EchartView
+    <com.example.administrator.demo.open_source_framework.echarts.EchartView
         android:id="@+id/lineChart"
         android:layout_width="400dp"
         android:layout_height="400dp"
         android:layout_gravity="center">
-    </com.example.administrator.demo.echarts.EchartView>
+    </com.example.administrator.demo.open_source_framework.echarts.EchartView>
 
 </LinearLayout>

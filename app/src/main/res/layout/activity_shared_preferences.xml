@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".SharedPreferences.SharedPreferencesActivity">
+    tools:context=".android_base.SharedPreferences.SharedPreferencesActivity">
 
     <TextView
         android:id="@+id/tv_test1"

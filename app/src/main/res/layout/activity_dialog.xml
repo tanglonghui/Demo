@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.administrator.demo.dialog.DialogActivity">
+    tools:context=".android_base.dialog.DialogActivity">
 
     <TextView
         android:id="@+id/tv_1"

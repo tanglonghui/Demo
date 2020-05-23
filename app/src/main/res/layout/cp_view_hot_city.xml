@@ -12,7 +12,7 @@
         style="@style/LetterIndexTextViewStyle"
         android:text="热门城市" />
 
-    <com.example.administrator.demo.recycleview.CitySelect.widget.WrapHeightGridView
+    <com.example.administrator.demo.android_base.recycleview.CitySelect.widget.WrapHeightGridView
         android:id="@+id/gridview_hot_city"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

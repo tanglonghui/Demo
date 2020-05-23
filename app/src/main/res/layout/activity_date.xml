@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.administrator.demo.date.DateActivity">
+    tools:context=".java_base.date.DateActivity">
 
     <TextView
         android:id="@+id/tv_date_to_string"

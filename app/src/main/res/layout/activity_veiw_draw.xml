@@ -6,15 +6,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center|top"
-    tools:context="com.example.administrator.demo.viewDraw.ViewDrawActivity">
+    tools:context=".view.viewDraw.ViewDrawActivity">
 
-    <com.example.administrator.demo.viewDraw.MyTextView
+    <com.example.administrator.demo.view.viewDraw.MyTextView
         android:layout_width="100dp"
         android:layout_height="20dp"
         android:gravity="center"
         android:text="线" />
 
-    <com.example.administrator.demo.viewDraw.MyView
+    <com.example.administrator.demo.view.viewDraw.MyView
         android:layout_width="wrap_content"
         android:layout_height="200dp"
         android:paddingLeft="50dp"

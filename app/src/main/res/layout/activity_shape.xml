@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="2dp"
-    tools:context="com.example.administrator.demo.res.ShapeActivity">
+    tools:context=".ui.res.ShapeActivity">
 
     <TextView
         android:layout_width="200dp"

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.example.administrator.demo.viewEventDispatch.ViewEventDispatchLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.example.administrator.demo.view.viewEventDispatch.ViewEventDispatchLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context="com.example.administrator.demo.viewEventDispatch.ViewEventDispatchActivity">
+    tools:context=".view.viewEventDispatch.ViewEventDispatchActivity">
 
-    <com.example.administrator.demo.viewEventDispatch.ViewEventDispatchLinearLayout
+    <com.example.administrator.demo.view.viewEventDispatch.ViewEventDispatchLinearLayout
         android:id="@+id/view_group"
         android:layout_width="200dp"
         android:layout_height="200dp"
@@ -16,13 +16,13 @@
         android:gravity="center"
         android:orientation="vertical">
 
-        <com.example.administrator.demo.viewEventDispatch.ViewEventDispatchTextView
+        <com.example.administrator.demo.view.viewEventDispatch.ViewEventDispatchTextView
             android:id="@+id/view"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:background="@color/colorAccent"
             android:gravity="center"
             android:text="hello world" />
-    </com.example.administrator.demo.viewEventDispatch.ViewEventDispatchLinearLayout>
+    </com.example.administrator.demo.view.viewEventDispatch.ViewEventDispatchLinearLayout>
 
-</com.example.administrator.demo.viewEventDispatch.ViewEventDispatchLinearLayout>
+</com.example.administrator.demo.view.viewEventDispatch.ViewEventDispatchLinearLayout>

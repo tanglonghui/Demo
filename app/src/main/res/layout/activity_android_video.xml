@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#5e8467"
-    tools:context="com.example.administrator.demo.video.AndroidVideoActivity">
+    tools:context=".android_base.video.AndroidVideoActivity">
 
     <FrameLayout
         android:layout_width="match_parent"

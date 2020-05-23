@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.administrator.demo.rxjava.RxJavaActivity">
+    tools:context=".open_source_framework.rxjava.RxJavaActivity">
 
     <TextView
         android:id="@+id/tv_easy"
