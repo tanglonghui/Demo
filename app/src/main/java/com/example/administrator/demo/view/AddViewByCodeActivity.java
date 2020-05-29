@@ -1,9 +1,15 @@
 package com.example.administrator.demo.view;
 
+import android.content.res.Resources;
 import android.graphics.Color;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.view.Display;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -19,6 +25,7 @@ import com.example.librarytest.utils.T;
 public class AddViewByCodeActivity extends AppCompatActivity {
     private TextView tv1;
     private TextView tv2;
+    private TextView tv3;
     private FrameLayout flContent;
 
 
@@ -29,6 +36,7 @@ public class AddViewByCodeActivity extends AppCompatActivity {
 
         tv1 = (TextView) findViewById(R.id.tv_1);
         tv2 = (TextView) findViewById(R.id.tv_2);
+        tv3 = (TextView) findViewById(R.id.tv_3);
         flContent = (FrameLayout) findViewById(R.id.fl_content);
         tv1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,6 +70,37 @@ public class AddViewByCodeActivity extends AppCompatActivity {
                     linearLayout.addView(textView);
                 }
 
+            }
+        });
+        tv3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 测试一
+                flContent.getLayoutParams();
+                flContent.getHeight();
+                flContent.getWidth();
+                //context的方法，获取windowManager
+                WindowManager windowManager = (WindowManager) getSystemService(WINDOW_SERVICE);
+                //获取屏幕对象
+                Display defaultDisplay = windowManager.getDefaultDisplay();
+                //获取屏幕的宽、高，单位是像素
+                int width = defaultDisplay.getWidth();
+                int height = defaultDisplay.getHeight();
+//获取资源对象
+                Resources resources = getResources();
+                //获取屏幕数据
+                DisplayMetrics displayMetrics = resources.getDisplayMetrics();
+                //获取屏幕宽高，单位是像素
+                int widthPixels = displayMetrics.widthPixels;
+                int heightPixels = displayMetrics.heightPixels;
+                //获取屏幕密度倍数
+                float density = displayMetrics.density;
+
+                View view = new View(AddViewByCodeActivity.this);
+                ViewGroup.LayoutParams params =new ViewGroup.LayoutParams(100,200);
+                view.setLayoutParams(params);
+                view.setBackgroundColor(Color.RED);
+                flContent.addView(view);
             }
         });
     }

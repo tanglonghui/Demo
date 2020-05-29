@@ -22,6 +22,10 @@
             android:id="@+id/tv_2"
             style="@style/HorizontalContentTextView"
             android:text="test 2" />
+        <TextView
+            android:id="@+id/tv_3"
+            style="@style/HorizontalContentTextView"
+            android:text="test 3" />
     </LinearLayout>
 
     <FrameLayout
