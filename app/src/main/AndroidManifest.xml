@@ -72,7 +72,8 @@
         <activity android:name=".android_base.recycleview.xrecycleview_test.XrecycleviewTestActivity" />
         <activity android:name=".test_box.test.Test2Activity" />
         <activity android:name=".view.AddViewByCodeActivity" />
-        <activity android:name=".android_base.junit4.UITestActivity"></activity>
+        <activity android:name=".android_base.junit4.UITestActivity" />
+        <activity android:name=".view.my_practice.PracticeOneActivity"></activity>
     </application>
 
 </manifest>

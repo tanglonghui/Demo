@@ -37,6 +37,7 @@ import com.example.administrator.demo.test_box.test.testPaper.TestPaperActivity;
 import com.example.administrator.demo.test_box.testPaper.MyTestPaperActivity;
 import com.example.administrator.demo.java_base.thread.ThreadActivity;
 import com.example.administrator.demo.android_base.video.AndroidVideoActivity;
+import com.example.administrator.demo.view.my_practice.PracticeOneActivity;
 import com.example.administrator.demo.view.viewDraw.ViewDrawActivity;
 import com.example.administrator.demo.view.viewEventDispatch.ViewEventDispatchActivity;
 import com.example.administrator.demo.view.viewLocation.ViewLocationActivity;
@@ -119,6 +120,7 @@ public class MainActivity extends AppCompatActivity {
         mList.add(new EasyModel("Enum 学习", EnumActivity.class));
         mList.add(new EasyModel("XrecycleviewTest", XrecycleviewTestActivity.class));
         mList.add(new EasyModel("使用代码添加 view", AddViewByCodeActivity.class));
+        mList.add(new EasyModel("一个复杂的界面练习", PracticeOneActivity.class));
 
     }
 
