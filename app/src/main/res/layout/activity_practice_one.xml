@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:background="#1879da"
         android:fitsSystemWindows="true"
+        app:navigationIcon="@mipmap/fanhui_icom"
         app:title="标题" />
 
     <android.support.v7.widget.RecyclerView

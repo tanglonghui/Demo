@@ -62,6 +62,13 @@ public class PracticeOneActivity extends AppCompatActivity {
 
             }
         });
+        //设置toolbar返回监听
+        tlToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
 
