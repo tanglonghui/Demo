@@ -14,7 +14,7 @@ public class AndroidBug5479Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_android_bug5479);
+        setContentView(R.layout.activity_android_bug5479_demo2);
         //设置沉浸模式（透明状态栏）
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window win = getWindow();
@@ -22,6 +22,7 @@ public class AndroidBug5479Activity extends AppCompatActivity {
                     | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
             win.setStatusBarColor(Color.TRANSPARENT);
         }
-        AndroidBug5497Workaround.assistActivity(this);
+//        AndroidBug5497Workaround.assistActivity(this);
+        SoftKeyboardFixerForFullscreen.assistActivity(this);
     }
 }

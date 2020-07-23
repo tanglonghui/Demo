@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+    <!--自定义标题-->
+    <com.example.administrator.demo.bug_box.AndroidBug5497.ImmerseGroup
+        android:id="@+id/im_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#26cfbe"
+        android:fitsSystemWindows="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:text="标题怎么说" />
+        </RelativeLayout>
+    </com.example.administrator.demo.bug_box.AndroidBug5497.ImmerseGroup>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_bottom"
+        android:layout_below="@+id/im_top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dimen_15_dip">
+
+            <TextView
+                android:id="@+id/tv_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="数据解析异常"
+                android:textColor="#333333"
+                android:textSize="@dimen/app_16_sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/xv_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_32_dip" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/shape_my"
+        android:padding="@dimen/dimen_8_dip">
+
+
+        <EditText
+            android:id="@+id/et_answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dimen_8_dip"
+            android:layout_toLeftOf="@+id/tv_commit"
+            android:background="@drawable/shape_my"
+            android:gravity="left|center"
+            android:hint="请输入观点（最多可输入200字）"
+            android:maxLength="200"
+            android:maxLines="5"
+            android:inputType="text"
+            android:minHeight="@dimen/dimen_40_dip"
+            android:padding="@dimen/dimen_5_dip"
+            android:scrollbars="vertical"
+            android:textSize="@dimen/app_15_sp" />
+
+        <TextView
+            android:id="@+id/tv_commit"
+            android:layout_width="@dimen/dimen_100_dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:gravity="center"
+            android:minHeight="@dimen/dimen_40_dip"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:textSize="@dimen/app_18_sp" />
+    </RelativeLayout>
+</RelativeLayout>
